@@ -11,7 +11,7 @@
   <div class="col-lg-8 mx-auto p-3 py-md-5">
 
     <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
-      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <a href="/ataglance" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="me-2" src="/images/logo.png" width="40">
         <span class="fs-4">Quran at a Glance</span>
       </a>
@@ -93,7 +93,7 @@
       var trans = $(this).parent().find('.accordion-body .trans');
       var id = $(this).attr('data-id');
       $.ajax({
-        url: '/r/' + id,
+        url: '/ataglance/r/' + id,
         context: document.body
       }).done(function(data) {
         var content = '';

@@ -118,10 +118,12 @@
       var trans = $(this).parent().find('.accordion-body .trans');
       var id = $(this).attr('data-id');
       var topic = $(this).attr('data-id');
+      console.log('calling');
       $.ajax({
         url: '/r/' + id,
         context: document.body
       }).done(function(data) {
+        console.log('done');
         var content = '';
         for (var i = 0; i < data.text.length; i++) {
           content += data.text[i].text + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';
@@ -142,6 +144,7 @@
           eventCategory: 'Topic',
           eventAction: 'view',
           eventLabel: 'Passage: ' + id
+        });
       });
     });
   </script>

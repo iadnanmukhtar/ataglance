@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quran at a Glance</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+
+    <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <img class="me-2" src="/images/logo.png" width="40">
+        <span class="fs-4">Quran at a Glance</span>
+      </a>
+    </header>
+
+    <main class="row">
+
+      <p class="fs-5">
+        Easily grasp the structure of the Holy Quran by browsing the summary and description of its major themes, all in a form of the following table of contents.
+      </p>
+
+      <!-- Quran -->
+      <div class="col-9">
+      
+      <% 
+        var sura=0; 
+        for (var i=0; i < toc.length; i++) { 
+          var id = toc[i].sura + '_' + toc[i].range;
+          if (toc[i].sura != sura) { 
+            sura = toc[i].sura; 
+            if (sura > 1) { %>
+              </div>
+            <% } %>
+          <h2 id="SURA_<%= sura %>" class="mt-2">Sura <%= sura %> <%= md.sura[sura-1].tname %></h2>
+          <div class="accordion" id="SURATOPICS_<%= sura %>">
+
+        <% } %>
+
+            <div class="accordion-item">
+              <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
+                <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
+                  <div class="col"><%= toc[i].topics %></div>
+                  <div class="col-2 text-end"><span class="badge rounded-pill bg-success"><%= sura %>:<%= toc[i].range %></span></div>
+                </button>
+              </h3>
+              <div id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
+                <div class="accordion-body">
+                  <div class="row">
+                    <div class="col-md-6 col-12 trans"></div>
+                    <div lang="ar" class="col-md-6 col-12 text"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 more"><a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= (toc[i].range + '').split('-')[0] %>">more translations &hellip;</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      <% } %>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="suranav col-3 text-muted">
+        <strong class="d-block h6 my-2 pb-2 border-bottom">Suras</strong>
+        <nav class="sticky-top navbar pt-3 align-items-self" style="overflow: scroll; height: 100vh;">
+          <small>
+          <ol>
+          <%
+            for (var i=0; i<md.sura.length; i++) {
+          %>
+            <li><a href="#SURA_<%= (i+1) %>"><%= md.sura[i].tname %></a></li>
+          <% } %>
+          </ol>
+          </small>
+        </nav>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    $('.accordion-header').click(function() {
+      var text = $(this).parent().find('.accordion-body .text');
+      var trans = $(this).parent().find('.accordion-body .trans');
+      var id = $(this).attr('data-id');
+      $.ajax({
+        url: '/r/' + id,
+        context: document.body
+      }).done(function(data) {
+        var content = '';
+        for (var i = 0; i < data.text.length; i++) {
+          content += data.text[i].text + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';
+        }
+        text.html(content);
+        content = '';
+        for (var i = 0; i < data.trans.length; i++) {
+          content += '<sup>';
+          if (i == 0)
+            content += id.split('_')[0] + ':' + data.trans[i].index;
+          else
+            content += data.trans[i].index;
+          content += '</sup>&nbsp;' + data.trans[i].text + ' ';
+        }
+        trans.html(content);
+      });
+    });
+  </script>
+
+</body>
+</html>

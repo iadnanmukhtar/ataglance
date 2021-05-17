@@ -117,6 +117,7 @@
       var text = $(this).parent().find('.accordion-body .text');
       var trans = $(this).parent().find('.accordion-body .trans');
       var id = $(this).attr('data-id');
+      var topic = $(this).attr('data-id');
       $.ajax({
         url: '/r/' + id,
         context: document.body
@@ -136,6 +137,11 @@
           content += '</sup>&nbsp;' + data.trans[i].text + ' ';
         }
         trans.html(content);
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Topic',
+          eventAction: 'view',
+          eventLabel: 'Passage: ' + id
       });
     });
   </script>

@@ -70,7 +70,7 @@
               <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
                   <div class="col"><%= toc[i].topics %></div>
-                  <div class="col-2 text-end"><span class="badge rounded-pill bg-success"><%= sura %>:<%= toc[i].range %></span></div>
+                  <div class="col-2 text-end me-2 me-md-0"><span class="badge rounded-pill bg-success"><%= sura %>:<%= (toc[i].range+'').split('-')[0] %></span></div>
                 </button>
               </h3>
               <div id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
@@ -93,7 +93,7 @@
       <!-- Navbar -->
       <div class="suranav col-3 text-muted">
         <strong class="d-block h6 my-2 pb-2 border-bottom">Suras</strong>
-        <nav class="sticky-top navbar pt-3 align-items-self" style="overflow: scroll; height: 100vh;">
+        <nav class="sticky-top navbar pt-3 align-items-self">
           <small>
           <ol>
           <%

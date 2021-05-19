@@ -32,10 +32,22 @@ h2 {
   font-size: 1.3rem;
 }
 
+.suranav nav {
+  overflow: scroll; 
+  height: 100vh;
+}
+
 .suranav ol {
   font-size: 0.8rem;
 }
 
 .suranav li {
   white-space: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .suranav nav {
+    overflow-x: scroll; 
+    overflow-y: scroll;
+  }
 }

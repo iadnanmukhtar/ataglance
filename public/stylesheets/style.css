@@ -45,6 +45,12 @@ h2 {
   white-space: nowrap;
 }
 
+.search-results em {
+  color: blue;
+  font-weight: bold;
+  font-style: normal;
+}
+
 @media only screen and (max-width: 768px) {
   .suranav nav {
     overflow-x: scroll; 

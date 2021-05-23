@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quran at a Glance: Search Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <link href="/ataglance/stylesheets/style.css" rel="stylesheet">
+
+  <link rel="image_src" href="/ataglance/images/logo.png" />
+  <link rel="apple-touch-icon" href="/ataglance/images/logo.png" />
+  <link rel="icon" href="/ataglance/images/logo.png" />
+
+  <meta name="encoding" content="UTF-8">
+  <meta name="description" content="Browsable Summary and description of major themes of the Quran.">
+
+  <meta itemprop="name" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta itemprop="description" content="Browsable Summary and description of major themes of the Quran.">
+  <meta itemprop="image" content="https://quranunlocked.com/ataglance/images/logo.png">
+
+  <meta property="og:site_name" content="Quran at a Glance">
+  <meta property="og:locale" content="en">
+  <meta property="og:url" content="https://quranunlocked.com/ataglance">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta property="og:description" content="Browsable Summary and description of major themes of the Quran.">
+  <meta property="og:image" content="https://quranunlocked.com/ataglance/images/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta name="twitter:description" content="Browsable Summary and description of major themes of the Quran.">
+  <meta name="twitter:image" content="https://quranunlocked.com/ataglance/images/logo.png">
+
+</head>
+<body>
+
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+
+    <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
+      <a href="/ataglance" class="d-flex align-items-center text-dark text-decoration-none">
+        <img class="me-2" src="/ataglance/images/logo.png" width="40">
+        <span class="fs-4">Quran at a Glance</span>
+      </a>
+      <div class="ms-auto">
+        <form class="d-flex" target="/ataglance">
+          <input class="form-control form-control-sm me-2" size="15" name="q" type="search" value="<%=q%>" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-outline-success" type="submit">Go</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="search-results">
+
+      <p>
+        Search results for: <%=q%>
+      </p>
+
+      <% for (var i = 0; i < results.length; i++ ) { %>
+        <div class="mt-2 row">
+          <div class="col-md-6 col-12 trans">
+            <sup><%=results[i].sura%>:<%=results[i].aya%></sup>&nbsp;<%- results[i].trans %>
+          </div>
+          <div lang="ar" class="col-md-6 col-12 text">
+            <%- results[i].text %>&nbsp;<span title="<%=results[i].sura%>:<%=results[i].aya%>">۝</span>
+          </div>
+        </div>
+      <% } %>
+
+    </main>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');	
+  ga('create', 'UA-10540377-8', 'auto');
+  ga('send', {
+    hitType: 'pageview',
+    title: 'Quran at a Glance',
+    page: '/ataglance'
+  });
+  </script>
+
+</body>
+</html>

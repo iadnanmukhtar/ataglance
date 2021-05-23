@@ -31,6 +31,28 @@
   <meta name="twitter:description" content="Browsable Summary and description of major themes of the Quran.">
   <meta name="twitter:image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://quranunlocked.com/ataglance",
+      "logo": "https://quranunlocked.com/ataglance/images/logo.png"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "http://quranunlocked.com/ataglance",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://quranunlocked.com/ataglance?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
 </head>
 <body>
 
@@ -41,6 +63,12 @@
         <img class="me-2" src="/ataglance/images/logo.png" width="40">
         <span class="fs-4">Quran at a Glance</span>
       </a>
+      <div class="ms-auto">
+        <form class="d-flex" target="/ataglance">
+          <input class="form-control form-control-sm me-2" size="15" name="q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-outline-success" type="submit">Go</button>
+        </form>
+      </div>
     </header>
 
     <main class="row">

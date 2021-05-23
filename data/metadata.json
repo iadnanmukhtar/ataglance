@@ -46,7 +46,7 @@
 			"order": 112,
 			"rukus": 16,
 			"name": "المائدة",
-			"tname": "Maida",
+			"tname": "Ma'ida",
 			"ename": "The Table",
 			"type": "Medinan"
 		},
@@ -196,8 +196,8 @@
 			"order": 45,
 			"rukus": 8,
 			"name": "طه",
-			"tname": "Ta-Ha",
-			"ename": "Ta-Ha",
+			"tname": "Ta Ha",
+			"ename": "Ta Ha",
 			"type": "Meccan"
 		},
 		{
@@ -236,7 +236,7 @@
 			"order": 102,
 			"rukus": 9,
 			"name": "النور",
-			"tname": "Noor",
+			"tname": "Nur",
 			"ename": "The Light",
 			"type": "Medinan"
 		},
@@ -286,7 +286,7 @@
 			"order": 85,
 			"rukus": 7,
 			"name": "العنكبوت",
-			"tname": "`Ankaboot",
+			"tname": "`Ankabut",
 			"ename": "The Spider",
 			"type": "Meccan"
 		},
@@ -296,7 +296,7 @@
 			"order": 84,
 			"rukus": 6,
 			"name": "الروم",
-			"tname": "Room",
+			"tname": "Rum",
 			"ename": "The Romans",
 			"type": "Meccan"
 		},
@@ -356,8 +356,8 @@
 			"order": 41,
 			"rukus": 5,
 			"name": "يس",
-			"tname": "Yaseen",
-			"ename": "Yaseen",
+			"tname": "Ya Sin",
+			"ename": "Ya Sin",
 			"type": "Meccan"
 		},
 		{
@@ -436,7 +436,7 @@
 			"order": 64,
 			"rukus": 3,
 			"name": "الدخان",
-			"tname": "Dukhan",
+			"tname": "Dukhkhan",
 			"ename": "The Smoke",
 			"type": "Meccan"
 		},
@@ -556,7 +556,7 @@
 			"order": 46,
 			"rukus": 3,
 			"name": "الواقعة",
-			"tname": "Waqia",
+			"tname": "Waqi`a",
 			"ename": "The Inevitable",
 			"type": "Meccan"
 		},
@@ -626,7 +626,7 @@
 			"order": 104,
 			"rukus": 2,
 			"name": "المنافقون",
-			"tname": "Munafiqoon",
+			"tname": "Munafiqun",
 			"ename": "The Hypocrites",
 			"type": "Medinan"
 		},
@@ -846,7 +846,7 @@
 			"order": 27,
 			"rukus": 1,
 			"name": "البروج",
-			"tname": "Burooj",
+			"tname": "Buruj",
 			"ename": "The Constellations",
 			"type": "Meccan"
 		},
@@ -946,7 +946,7 @@
 			"order": 28,
 			"rukus": 1,
 			"name": "التين",
-			"tname": "At-Tin",
+			"tname": "Tin",
 			"ename": "The Fig",
 			"type": "Meccan"
 		},

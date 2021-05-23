@@ -12,22 +12,22 @@
   <link rel="icon" href="/ataglance/images/logo.png" />
 
   <meta name="encoding" content="UTF-8">
-  <meta name="description" content="Browsable Summary and description of major themes of the Quran.">
+  <meta name="description" content="Quran search results for term: '<%= q %>'">
 
-  <meta itemprop="name" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta itemprop="name" content="Quran at a Glance - Search results for term: '<%= q %>'">
   <meta itemprop="description" content="Browsable Summary and description of major themes of the Quran.">
   <meta itemprop="image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
-  <meta property="og:site_name" content="Quran at a Glance">
+  <meta property="og:site_name" content="Quran at a Glance - Search results for term: '<%= q %>'">
   <meta property="og:locale" content="en">
   <meta property="og:url" content="https://quranunlocked.com/ataglance">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta property="og:title" content="Quran at a Glance - Search results for term: ">
   <meta property="og:description" content="Browsable Summary and description of major themes of the Quran.">
   <meta property="og:image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta name="twitter:title" content="Quran at a Glance - Search results for term: '<%= q %>'">
   <meta name="twitter:description" content="Browsable Summary and description of major themes of the Quran.">
   <meta name="twitter:image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
@@ -39,7 +39,7 @@
     <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
       <a href="/ataglance" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="me-2" src="/ataglance/images/logo.png" width="40">
-        <span class="fs-4">Quran at a Glance</span>
+        <h1 class="fs-4">Quran at a Glance</h1>
       </a>
       <div class="ms-auto">
         <form class="d-flex" target="/ataglance">
@@ -55,7 +55,10 @@
         Search results for: <%=q%>
       </p>
 
+      <ol>
       <% for (var i = 0; i < results.length; i++ ) { %>
+        <li>
+        <a class="result" href="/ataglance#A<%=results[i].sura%>_<%=results[i].aya%>">
         <div class="mt-2 row">
           <div class="col-md-6 col-12 trans">
             <sup><%=results[i].sura%>:<%=results[i].aya%></sup>&nbsp;<%- results[i].trans %>
@@ -64,7 +67,10 @@
             <%- results[i].text %>&nbsp;<span title="<%=results[i].sura%>:<%=results[i].aya%>">۝</span>
           </div>
         </div>
+        </a>
+        </li>
       <% } %>
+      </ol>
 
     </main>
 

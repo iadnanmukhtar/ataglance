@@ -30,7 +30,8 @@ router.get('/', function (req, res, next) {
       }
     } else {
       for (var i = 0; i < quran.length; i++) {
-        var q = new RegExp('(' + req.query.q + ')', 'g');
+        var q = req.query.q.replace(/[\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0670]+/g, '');
+        q = new RegExp('(' + q + ')', 'g');
         for (var j = 0; j < quran[i].ayas.length; j++) {
           if (squran[i].ayas[j].text.match(q))
             results.push({

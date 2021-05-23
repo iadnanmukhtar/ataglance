@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quran at a Glance</title>
+  <title>Quran at a Glance - Browsable Quranic Themes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
   <meta name="encoding" content="UTF-8">
   <meta name="description" content="Browsable Summary and description of major themes of the Quran.">
 
-  <meta itemprop="name" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta itemprop="name" content="Quran at a Glance - Browsable Quranic Themes">
   <meta itemprop="description" content="Browsable Summary and description of major themes of the Quran.">
   <meta itemprop="image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
@@ -22,12 +22,12 @@
   <meta property="og:locale" content="en">
   <meta property="og:url" content="https://quranunlocked.com/ataglance">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta property="og:title" content="Quran at a Glance - Browsable Quranic Themes">
   <meta property="og:description" content="Browsable Summary and description of major themes of the Quran.">
   <meta property="og:image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quran at a Glance - a Browsable Summary of the Quran">
+  <meta name="twitter:title" content="Quran at a Glance - Browsable Quranic Themes">
   <meta name="twitter:description" content="Browsable Summary and description of major themes of the Quran.">
   <meta name="twitter:image" content="https://quranunlocked.com/ataglance/images/logo.png">
 
@@ -61,10 +61,10 @@
     <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
       <a href="/ataglance" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="me-2" src="/ataglance/images/logo.png" width="40">
-        <span class="fs-4">Quran at a Glance</span>
+        <h1 class="fs-4">Quran at a Glance</h1>
       </a>
       <div class="ms-auto">
-        <form class="d-flex" target="/ataglance">
+        <form class="d-flex">
           <input class="form-control form-control-sm me-2" size="15" name="q" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-sm btn-outline-success" type="submit">Go</button>
         </form>
@@ -78,27 +78,38 @@
       </p>
 
       <!-- Quran -->
-      <div class="col-9">
+      <div class="col-8 col-md-9">
       
       <% 
         var sura=0; 
         for (var i=0; i < toc.length; i++) { 
           var id = toc[i].sura + '_' + toc[i].range;
+          var range = (toc[i].range + '').split('-');
+          if (range.length == 1)
+            range.push(range[0]);
+          var anchors = [];
+          for (var r = range[0]; r <= range[1]; r++)
+            anchors.push(toc[i].sura + '_' + r);
           if (toc[i].sura != sura) { 
             sura = toc[i].sura; 
             if (sura > 1) { %>
               </div>
             <% } %>
-          <h2 id="SURA_<%= sura %>" class="mt-2">Sura <%= sura %> <%= md.sura[sura-1].tname %></h2>
+          
+          <h2 id="S<%= sura %>" class="mt-2">Sura <%= sura %> <%= md.sura[sura-1].tname %></h2>
           <div class="accordion" id="SURATOPICS_<%= sura %>">
 
         <% } %>
 
+            <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
             <div class="accordion-item">
               <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
-                  <div class="col"><%= toc[i].topics %></div>
-                  <div class="col-2 text-end me-2 me-md-0"><span class="badge rounded-pill bg-success"><%= sura %>:<%= (toc[i].range+'').split('-')[0] %></span></div>
+                  <div class="col">
+                    <%= toc[i].topics %>
+                    <div class="ref d-block d-sm-none"><small><%= sura %>:<%= range[0] %></small></div>
+                  </div>
+                  <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block"><span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span></div>
                 </button>
               </h3>
               <div id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
@@ -108,7 +119,7 @@
                     <div lang="ar" class="col-md-6 col-12 text"></div>
                   </div>
                   <div class="row">
-                    <div class="col-12 more"><a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= (toc[i].range + '').split('-')[0] %>">more translations &hellip;</a></div>
+                    <div class="col-12 more"><a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= range[0] %>">more translations &hellip;</a></div>
                   </div>
                 </div>
               </div>
@@ -119,7 +130,7 @@
       </div>
 
       <!-- Navbar -->
-      <div class="suranav col-3 text-muted">
+      <div class="suranav col-4 col-md-3 text-muted">
         <strong class="d-block h6 my-2 pb-2 border-bottom">Suras</strong>
         <nav class="sticky-top navbar pt-3 align-items-self">
           <small>
@@ -127,7 +138,10 @@
           <%
             for (var i=0; i<md.sura.length; i++) {
           %>
-            <li><a href="#SURA_<%= (i+1) %>"><%= md.sura[i].tname %></a></li>
+            <li>
+              <% if (md.sura[i].type === 'Meccan') { %>🕋<% } else { %>🕌<% } %>
+              <a href="#S<%= (i+1) %>"><%= md.sura[i].tname %></a>
+            </li>
           <% } %>
           </ol>
           </small>

@@ -11,6 +11,10 @@ h2 {
   font-size: 0.9rem;
 }
 
+.ref {
+  color: #198754;
+}
+
 .accordion-item button {
   font-size: 0.9rem;
 }
@@ -49,6 +53,16 @@ h2 {
   color: blue;
   font-weight: bold;
   font-style: normal;
+}
+
+.search-results .result {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-results .result:hover {
+  color: inherit;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

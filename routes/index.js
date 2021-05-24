@@ -49,7 +49,8 @@ router.get('/', function (req, res, next) {
       q: req.query.q,
       results: results,
       quran: quran,
-      equran: quran
+      equran: quran,
+      md: metadata
     });
   } else
     res.render('index', {

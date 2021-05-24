@@ -3146,17 +3146,22 @@
     },
     {
         "sura": 20,
-        "range": "113-115",
+        "range": "113-114",
         "topics": "The Quran is sent in Arabic to teach and to remind, so read and say: \"O my Lord, increase me in knowledge."
     },
     {
         "sura": 20,
-        "range": "116-128",
-        "topics": "The story of Adam's creation and Satan's temptation. Allah forgave Adam's sin, chose him and guided him to the right Way. Those who do not read the Quran and follow its guidance, shall be raised as blind on the Day of Resurrection."
+        "range": "115-123",
+        "topics": "The story of Adam's creation and Satan's temptation. Allah forgave Adam's sin, chose him and guided him to the right Way."
     },
     {
         "sura": 20,
-        "range": "129-132",
+        "range": "124-129",
+        "topics": "Those who do not read the Quran and follow its guidance, shall be raised as blind on the Day of Resurrection."
+    },
+    {
+        "sura": 20,
+        "range": "130-132",
         "topics": "Do not envy others in worldly benefits, rather seek Allah's pleasure if you want to attain the blessed end."
     },
     {
@@ -3211,8 +3216,18 @@
     },
     {
         "sura": 21,
-        "range": "51-71",
-        "topics": "Abraham questioned the idol worshiping of his father and his people. Abraham broke all their idols to show, that the gods who can not even defend themselves, how they can be of any benefit to them. They decided to burn him alive but Allah commanded the fire to be cool and comfortable for Abraham."
+        "range": "51-57",
+        "topics": "Abraham questioned the idol worshiping of his father and his people."
+    },
+    {
+        "sura": 21,
+        "range": "58-67",
+        "topics": "Abraham broke all their idols to show, that the gods who can not even defend themselves, how they can be of any benefit to them."
+    },
+    {
+        "sura": 21,
+        "range": "68-71",
+        "topics": "They decided to burn Abraham alive but Allah commanded the fire to be cool and comfortable for him."
     },
     {
         "sura": 21,
@@ -5182,7 +5197,7 @@
     {
         "sura": 75,
         "range": "31-40",
-        "topics": "The disbelievers don’t believe because they never took Al-Islam seriously."
+        "topics": "The disbelievers don’t believe because they never took Islam seriously."
     },
     {
         "sura": 76,

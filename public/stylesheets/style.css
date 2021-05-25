@@ -19,6 +19,15 @@ h2 {
   font-size: 0.9rem;
 }
 
+.admin-ctrls {
+  z-index: 0;
+}
+
+[contenteditable=true] {
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
 .trans,
 .more {
   font-size: 0.8rem;
@@ -29,7 +38,7 @@ h2 {
   font-weight: bold;
 }
 
-.text {
+.text, :lang(ar) {
   direction: rtl;
   font-family: hafs;
   text-align: justify;

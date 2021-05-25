@@ -96,7 +96,7 @@
               </div>
             <% } %>
           
-          <h2 id="S<%= sura %>" class="mt-2">Sura <%= sura %> <%= md.sura[sura-1].tname %> (<%= md.sura[sura-1].ename %>)</h2>
+          <h2 id="S<%= sura %>" class="mt-2">Sura <span lang="ar"><%= md.sura[sura-1].name %></span> <%= sura %> <%= md.sura[sura-1].tname %> (<%= md.sura[sura-1].ename %>)</h2>
           <div class="accordion" id="SURATOPICS_<%= sura %>">
 
         <% } %>
@@ -106,8 +106,14 @@
               <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
                   <div class="col">
-                    <%= toc[i].topics %>
+                    <div id="TOPICREF_<%= toc[i].ref %>" class="topic"><%= toc[i].topics %></div>
                     <div class="ref d-block d-sm-none"><small><%= sura %>:<%= range[0] %></small></div>
+                    <% if (admin) { %>
+                    <div class="admin-ctrls" style="display:none">
+                      Range: <span id="TOPICRANGE_<%= toc[i].ref %>" contenteditable="true"><%= toc[i].range %></span>
+                      <small><a class="admin-ctrl-update" data-ref="<%= toc[i].ref %>" href="#">Update</a></small>
+                    </div>
+                    <% } %>
                   </div>
                   <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block"><span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span></div>
                 </button>
@@ -155,17 +161,36 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
   <script>
+    <% if (admin) { %>
+    $('.accordion-item .topic').dblclick(function() {
+      $(this).attr('contenteditable','true');
+      $(this).parent().find('.admin-ctrls').show();
+    });
+    $('.admin-ctrl-update').click(function() {
+      var ref = $(this).data('ref');
+      var topics = $('#TOPICREF_' + ref).text();
+      var range = $('#TOPICRANGE_' + ref).text();
+      $.post('/u', {
+            ref: ref,
+            range: range,
+            topics: topics
+        }, function (data) {
+            window.location.href = '/';
+            return true;
+        }).fail(function (err) {
+            alert('Error updating item: ' + err.status + ' ' + err.statusText);
+        });
+    });
+    <% } %>
     $('.accordion-header').click(function() {
       var text = $(this).parent().find('.accordion-body .text');
       var trans = $(this).parent().find('.accordion-body .trans');
-      var id = $(this).attr('data-id');
-      var topic = $(this).attr('data-id');
-      console.log('calling');
+      var id = $(this).data('id');
+      var topic = $(this).data('id');
       $.ajax({
         url: '/r/' + id,
         context: document.body
       }).done(function(data) {
-        console.log('done');
         var content = '';
         for (var i = 0; i < data.text.length; i++) {
           content += data.text[i].text + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';

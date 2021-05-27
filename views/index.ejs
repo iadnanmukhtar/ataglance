@@ -99,7 +99,7 @@
           <h2 id="S<%= sura %>" class="mt-2">Sura <span lang="ar"><%= md.sura[sura-1].name %></span> <%= sura %> <%= md.sura[sura-1].tname %> (<%= md.sura[sura-1].ename %>)</h2>
           <div class="accordion" id="SURATOPICS_<%= sura %>">
 
-        <% } %>
+          <% } %>
 
             <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
             <div class="accordion-item">
@@ -175,7 +175,7 @@
             range: range,
             topics: topics
         }, function (data) {
-            window.location.href = '/';
+            location.reload();
             return true;
         }).fail(function (err) {
             alert('Error updating item: ' + err.status + ' ' + err.statusText);

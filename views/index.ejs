@@ -110,6 +110,7 @@
                     <div class="ref d-block d-sm-none"><small><%= sura %>:<%= range[0] %></small></div>
                     <% if (admin) { %>
                     <div class="admin-ctrls" style="display:none">
+                      Tags: <span id="TOPICTAGS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].tags %></span><br>
                       Range: <span id="TOPICRANGE_<%= toc[i].ref %>" contenteditable="true"><%= toc[i].range %></span>
                       <small><a class="admin-ctrl-update" data-ref="<%= toc[i].ref %>" href="#">Update</a></small>
                     </div>
@@ -172,10 +173,12 @@
         var ref = $(this).data('ref');
         var topics = $('#TOPICREF_' + ref).text();
         var range = $('#TOPICRANGE_' + ref).text();
+        var tags = $('#TOPICTAGS_' + ref).text();
         $.post('/u', {
               ref: ref,
               range: range,
-              topics: topics
+              topics: topics,
+              tags: tags
           }, function (data) {
               history.go(0);
               return true;

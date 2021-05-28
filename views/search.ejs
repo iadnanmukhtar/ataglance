@@ -60,6 +60,12 @@
         <li>
         <a class="result" href="/ataglance#A<%=results[i].sura%>_<%=results[i].aya%>">
         <div class="mt-2 row">
+          <% if (results[i].topics) { %>
+          <div class="col-12 trans"><%- results[i].topics %></div>
+          <% } 
+             if (results[i].topics) { %>
+            <div class="col-12 trans"><%- results[i].tags %></div>
+          <% } %>
           <div class="col-md-6 col-12 trans">
             <sup><%=results[i].sura%>:<%=results[i].aya%></sup>&nbsp;<%- results[i].trans %>
           </div>

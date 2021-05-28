@@ -77,6 +77,22 @@ function search(q, lang) {
   var results = [];
   var q = new RegExp('(' + q + ')', 'ig');
   var searchable = (lang == 'en') ? enQuran : arQuran;
+
+  if (lang == 'en') {
+    for (var i = 0; i < toc.length; i++) {
+      if ((toc[i].topics + ' ' + toc[i].tags).toLowerCase().match(q)) {
+        var aya = toc[i].range.split('-')[0];
+        results.push({
+          "sura": i + 1,
+          "topics": toc[i].topics.replace(q, '<em>$1</em>'),
+          "tags": (toc[i].tags + '').replace(q, '<em>$1</em>'),
+          "aya": aya,
+          "text": quran[toc[i].sura-1].ayas[aya-1].text,
+          "trans": enQuran[toc[i].sura-1].ayas[aya-1].text
+        });
+      }
+    }
+  }
   for (var i = 0; i < searchable.length; i++) {
     for (var j = 0; j < searchable[i].ayas.length; j++) {
       if (searchable[i].ayas[j].text.toLowerCase().match(q))

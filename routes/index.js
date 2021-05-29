@@ -64,18 +64,22 @@ router.post('/u', function (req, res, next) {
   res.json(result);
 });
 
-function searchEnglish(q) {
-  return search(q, 'en');
+function searchEnglish(qs) {
+  return search(qs, 'en');
 }
 
-function searchArabic(q) {
-  q = q.replace(/[\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0670]+/g, '');
-  return search(q, 'ar');
+function searchArabic(qs) {
+  qs = qs.replace(/[\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0670]+/g, '');
+  return search(qs, 'ar');
 }
 
-function search(q, lang) {
+function search(qs, lang) {
   var results = [];
-  var qt = q.split(/\s+/);
+
+  var q = new RegExp('(' + qs + ')', 'ig');
+  results = results.concat(searchQ(q, lang));
+
+  var qt = qs.split(/\s+/);
   q = '';
   for (var i = 0; i < qt.length; i++) {
     q += qt[i];
@@ -83,9 +87,23 @@ function search(q, lang) {
       q += '.+';
   }
   q = new RegExp('(' + q + ')', 'ig');
+  results = results.concat(searchQ(q, lang).filter(function (value) {
+    var add = true;
+    for (var i = 0; i < results.length; i++) {
+      if (results[i].sura == value.sura && results[i].aya == value.aya) {
+        add = false;
+        break;
+      }
+    }
+    return add;
+  }));
 
+  return results;
+}
+
+function searchQ(q, lang) {
+  var results = [];
   var searchable = (lang == 'en') ? enQuran : arQuran;
-
   if (lang == 'en') {
     for (var i = 0; i < toc.length; i++) {
       if ((toc[i].topics + ' ' + toc[i].tags).toLowerCase().match(q)) {

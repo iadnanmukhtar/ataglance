@@ -103,8 +103,8 @@
 
             <div class="accordion-item">
               <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
-                <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
+                  <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
                   <div class="col">
                     <div id="TOPICREF_<%= toc[i].ref %>" class="topic"><%= toc[i].topics %></div>
                     <div class="ref d-block d-sm-none">
@@ -119,12 +119,11 @@
                     <% } %>
                   </div>
                   <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block">
-                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span>
-                    <i data-id="<%= id %>" class="ms-2 far fa-bookmark"></i>
+                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span>&nbsp;<i data-id="<%= id %>" class="ms-2 far fa-bookmark"></i>
                   </div>
                 </button>
               </h3>
-              <div id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
+              <section id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
                 <div class="accordion-body">
                   <div class="row">
                     <div class="col-md-6 col-12 trans"></div>
@@ -134,7 +133,7 @@
                     <div class="col-12 more"><a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= range[0] %>">more translations &hellip;</a></div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
 
       <% } %>
@@ -148,6 +147,7 @@
           <small>
 
           <div id="BOOKMARKS" class="mb-2">
+            <ul><li><i class="fas fa-bookmark"></i> <a href="#top">Top</a></li></ul>
           </div>
 
           <ol>
@@ -171,126 +171,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/3c8decddde.js" crossorigin="anonymous"></script>
+  <script src="/ataglance/javascripts/script.js"></script>
 
-  <script>
-    $(document).ready(function() {
-
-      showBookmarksList();
-      showBookmarks();
-
-      function getBookmarks() {
-        var bookmarks = [];
-        var bookmarksVal = localStorage.getItem('bookmarks');
-        if (bookmarksVal)
-          bookmarks = JSON.parse(bookmarksVal);
-        return bookmarks;
-      }
-
-      function showBookmarks() {
-        var bookmarks = getBookmarks();
-        if (bookmarks.length > 0) {
-          $('.fa-bookmark').each(function(i, elem) {
-            for (var i = 0; i < bookmarks.length; i++) {
-              if ($(this).data('id') == bookmarks[i]) {
-                $(this).removeClass('far');
-                $(this).addClass('fas');
-              }
-            }
-          });
-        }
-      }
-
-      function showBookmarksList() {
-        var bookmarks = getBookmarks();
-        var html = '';
-        if (bookmarks.length > 0) {
-          html += '<ul>';
-          for (var i = 0; i < bookmarks.length; i++) {
-            html += '<li><i data-id="' + bookmarks[i] + '" class="fas fa-bookmark"></i>&nbsp;' + 
-              '<a href="#TOPICHEAD_' + bookmarks[i] + '">' + bookmarks[i] + '</li>';
-          }
-          html += '</ul>';
-        }
-        $("#BOOKMARKS").html(html);
-      }
-
-      <% if (admin) { %>
-      $('.accordion-item .topic').dblclick(function() {
-        $(this).attr('contenteditable','true');
-        $(this).parent().find('.admin-ctrls').show();
-      });
-      $('.admin-ctrl-update').click(function() {
-        var ref = $(this).data('ref');
-        var topics = $('#TOPICREF_' + ref).text();
-        var range = $('#TOPICRANGE_' + ref).text();
-        var tags = $('#TOPICTAGS_' + ref).text();
-        $.post('/u', {
-              ref: ref,
-              range: range,
-              topics: topics,
-              tags: tags
-          }, function (data) {
-              history.go(0);
-              return true;
-          }).fail(function (err) {
-              alert('Error updating item: ' + err.status + ' ' + err.statusText);
-          });
-      });
-      <% } %>
-
-      $('.fa-bookmark').click(function() {
-        var id = $(this).data('id');
-        var bookmarks = getBookmarks();
-        if ($(this).hasClass('far')) {
-          bookmarks.push(id);
-          $(this).removeClass('far');
-          $(this).addClass('fas');
-        } else if ($(this).hasClass('fas')) {
-          bookmarks = bookmarks.filter(function(value, i, arr) {
-            return value != id;
-          });
-          $(this).removeClass('fas');
-          $(this).addClass('far');
-        }
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-        showBookmarksList();
-      });
-
-      $('.accordion-header').click(function() {
-        var text = $(this).parent().find('.accordion-body .text');
-        var trans = $(this).parent().find('.accordion-body .trans');
-        var id = $(this).data('id');
-        var topic = $(this).data('id');
-        $.ajax({
-          url: '/r/' + id,
-          context: document.body
-        }).done(function(data) {
-          var content = '';
-          for (var i = 0; i < data.text.length; i++) {
-            content += data.text[i].text + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';
-          }
-          text.html(content);
-          content = '';
-          for (var i = 0; i < data.trans.length; i++) {
-            content += '<sup>';
-            if (i == 0)
-              content += id.split('_')[0] + ':' + data.trans[i].index;
-            else
-              content += data.trans[i].index;
-            content += '</sup>&nbsp;' + data.trans[i].text + ' ';
-          }
-          trans.html(content);
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'Topic',
-            eventAction: 'view',
-            eventLabel: 'Passage: ' + id
-          });
+    <% if (admin) { %>
+      <script>
+        $('.accordion-item .topic').dblclick(function () {
+            $(this).attr('contenteditable', 'true');
+            $(this).parent().find('.admin-ctrls').show();
         });
-      });
-
-  });
-  </script>
+        $('.admin-ctrl-update').click(function () {
+            console.log('triggered');
+            var ref = $(this).data('ref');
+            var topics = $('#TOPICREF_' + ref).text();
+            var range = $('#TOPICRANGE_' + ref).text();
+            var tags = $('#TOPICTAGS_' + ref).text();
+            $.post('/u', {
+                ref: ref,
+                range: range,
+                topics: topics,
+                tags: tags
+            }, function (data) {
+                history.go(0);
+                return true;
+            }).fail(function (err) {
+                alert('Error updating item: ' + err.status + ' ' + err.statusText);
+            });
+        });
+      </script>
+    <% } %>
 
   <!-- Google Analytics -->
   <script>

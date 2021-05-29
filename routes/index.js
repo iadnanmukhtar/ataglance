@@ -75,7 +75,15 @@ function searchArabic(q) {
 
 function search(q, lang) {
   var results = [];
-  var q = new RegExp('(' + q + ')', 'ig');
+  var qt = q.split(/\s+/);
+  q = '';
+  for (var i = 0; i < qt.length; i++) {
+    q += qt[i];
+    if (i < qt.length-1)
+      q += '.+';
+  }
+  q = new RegExp('(' + q + ')', 'ig');
+
   var searchable = (lang == 'en') ? enQuran : arQuran;
 
   if (lang == 'en') {

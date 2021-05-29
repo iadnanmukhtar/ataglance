@@ -83,13 +83,14 @@ function search(q, lang) {
       if ((toc[i].topics + ' ' + toc[i].tags).toLowerCase().match(q)) {
         var aya = toc[i].range.split('-')[0];
         results.push({
-          "sura": i + 1,
+          "sura": toc[i].sura,
           "topics": toc[i].topics.replace(q, '<em>$1</em>'),
           "tags": (toc[i].tags + '').replace(q, '<em>$1</em>'),
           "aya": aya,
           "text": quran[toc[i].sura-1].ayas[aya-1].text,
           "trans": enQuran[toc[i].sura-1].ayas[aya-1].text
         });
+        break;
       }
     }
   }

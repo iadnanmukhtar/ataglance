@@ -19,6 +19,10 @@ h2 {
   font-size: 0.9rem;
 }
 
+.fa-bookmark {
+  color: darkred;
+}
+
 .admin-ctrls {
   z-index: 0;
 }
@@ -50,7 +54,7 @@ h2 {
   height: 100vh;
 }
 
-.suranav ol {
+.suranav {
   font-size: 0.8rem;
 }
 

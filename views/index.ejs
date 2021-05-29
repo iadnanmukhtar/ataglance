@@ -101,13 +101,15 @@
 
           <% } %>
 
-            <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
             <div class="accordion-item">
               <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
+                <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
                   <div class="col">
                     <div id="TOPICREF_<%= toc[i].ref %>" class="topic"><%= toc[i].topics %></div>
-                    <div class="ref d-block d-sm-none"><small><%= sura %>:<%= range[0] %></small></div>
+                    <div class="ref d-block d-sm-none">
+                      <i data-id="<%= id %>" class="far fa-bookmark"></i> <small><%= sura %>:<%= range[0] %></small>
+                    </div>
                     <% if (admin) { %>
                     <div class="admin-ctrls" style="display:none">
                       Tags: <span id="TOPICTAGS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].tags %></span><br>
@@ -116,7 +118,10 @@
                     </div>
                     <% } %>
                   </div>
-                  <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block"><span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span></div>
+                  <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block">
+                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span>
+                    <i data-id="<%= id %>" class="ms-2 far fa-bookmark"></i>
+                  </div>
                 </button>
               </h3>
               <div id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
@@ -141,6 +146,10 @@
         <strong class="d-block h6 my-2 pb-2 border-bottom">Suras</strong>
         <nav class="sticky-top navbar pt-3 align-items-self">
           <small>
+
+          <div id="BOOKMARKS" class="mb-2">
+          </div>
+
           <ol>
           <%
             for (var i=0; i<md.sura.length; i++) {
@@ -151,6 +160,7 @@
             </li>
           <% } %>
           </ol>
+
           </small>
         </nav>
       </div>
@@ -160,9 +170,49 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3c8decddde.js" crossorigin="anonymous"></script>
 
   <script>
     $(document).ready(function() {
+
+      showBookmarksList();
+      showBookmarks();
+
+      function getBookmarks() {
+        var bookmarks = [];
+        var bookmarksVal = localStorage.getItem('bookmarks');
+        if (bookmarksVal)
+          bookmarks = JSON.parse(bookmarksVal);
+        return bookmarks;
+      }
+
+      function showBookmarks() {
+        var bookmarks = getBookmarks();
+        if (bookmarks.length > 0) {
+          $('.fa-bookmark').each(function(i, elem) {
+            for (var i = 0; i < bookmarks.length; i++) {
+              if ($(this).data('id') == bookmarks[i]) {
+                $(this).removeClass('far');
+                $(this).addClass('fas');
+              }
+            }
+          });
+        }
+      }
+
+      function showBookmarksList() {
+        var bookmarks = getBookmarks();
+        var html = '';
+        if (bookmarks.length > 0) {
+          html += '<ul>';
+          for (var i = 0; i < bookmarks.length; i++) {
+            html += '<li><i data-id="' + bookmarks[i] + '" class="fas fa-bookmark"></i>&nbsp;' + 
+              '<a href="#TOPICHEAD_' + bookmarks[i] + '">' + bookmarks[i] + '</li>';
+          }
+          html += '</ul>';
+        }
+        $("#BOOKMARKS").html(html);
+      }
 
       <% if (admin) { %>
       $('.accordion-item .topic').dblclick(function() {
@@ -187,6 +237,25 @@
           });
       });
       <% } %>
+
+      $('.fa-bookmark').click(function() {
+        var id = $(this).data('id');
+        var bookmarks = getBookmarks();
+        if ($(this).hasClass('far')) {
+          bookmarks.push(id);
+          $(this).removeClass('far');
+          $(this).addClass('fas');
+        } else if ($(this).hasClass('fas')) {
+          bookmarks = bookmarks.filter(function(value, i, arr) {
+            return value != id;
+          });
+          $(this).removeClass('fas');
+          $(this).addClass('far');
+        }
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        showBookmarksList();
+      });
+
       $('.accordion-header').click(function() {
         var text = $(this).parent().find('.accordion-body .text');
         var trans = $(this).parent().find('.accordion-body .trans');
@@ -218,8 +287,8 @@
             eventLabel: 'Passage: ' + id
           });
         });
-
       });
+
   });
   </script>
 

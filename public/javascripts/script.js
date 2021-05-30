@@ -35,7 +35,7 @@ $(document).ready(function () {
         if (bookmarks.length > 0) {
             for (var i = 0; i < bookmarks.length; i++) {
                 html += '<li><a class="dropdown-item" href="#TOPICHEAD_' + bookmarks[i]
-                    + '"><i class="fas fa-bookmark"></i>&nbsp;' + bookmarks[i] + '</li>';
+                    + '"><i class="fas fa-bookmark"></i>&nbsp;' + bookmarks[i].replace(/_/, ':') + '</li>';
             }
             html += '<li><hr class="dropdown-divider"></li>'
         }
@@ -84,12 +84,6 @@ $(document).ready(function () {
                 content += '</sup>&nbsp;' + data.trans[i].text + ' ';
             }
             trans.html(content);
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Topic',
-                eventAction: 'view',
-                eventLabel: 'Passage: ' + id
-            });
         });
     });
 

@@ -1,6 +1,10 @@
 @font-face {
   font-family: "hafs";
-  src: url('/ataglance/images/UthmanicHafs1_Ver17.ttf');
+  src: url('/images/UthmanicHafs1_Ver17.ttf');
+}
+
+:root {
+  font-size: 22px;
 }
 
 h2 {
@@ -22,6 +26,11 @@ h2 {
 
 .accordion-item button {
   font-size: 0.9rem;
+}
+
+.topic a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .far, .fas {
@@ -71,8 +80,7 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  .suranav nav {
-    overflow-x: scroll; 
-    overflow-y: scroll;
+  :root {
+    font-size: 18px;
   }
 }

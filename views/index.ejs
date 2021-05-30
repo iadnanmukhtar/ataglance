@@ -124,9 +124,11 @@
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
                   <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
                   <div class="col">
-                    <div id="TOPICREF_<%= toc[i].ref %>" class="topic"><%= toc[i].topics %></div>
+                    <div id="TOPICREF_<%= toc[i].ref %>" class="topic">
+                      <i data-id="<%= id %>" class="me-2 far fa-bookmark"></i><%= toc[i].topics %>
+                    </div>
                     <div class="ref d-block d-sm-none">
-                      <i data-id="<%= id %>" class="far fa-bookmark"></i> <small><%= sura %>:<%= range[0] %></small>
+                      <a href="#top"><i class="me-2 far fa-hand-point-up"></i></a><small><%= sura %>:<%= toc[i].range %></small>
                     </div>
                     <% if (admin) { %>
                     <div class="admin-ctrls" style="display:none">
@@ -137,7 +139,7 @@
                     <% } %>
                   </div>
                   <div class="ref col-2 text-end me-2 me-md-0 d-none d-sm-block">
-                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span>&nbsp;<i data-id="<%= id %>" class="ms-2 far fa-bookmark"></i>
+                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span><a href="#top"><i class="ms-2 far fa-hand-point-up"></i></a>
                   </div>
                 </button>
               </h3>
@@ -148,7 +150,9 @@
                     <div lang="ar" class="col-md-6 col-12 text"></div>
                   </div>
                   <div class="row">
-                    <div class="col-12 more"><a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= range[0] %>">more translations &hellip;</a></div>
+                    <div class="col-12 more">
+                      <a target="qu" href="https://quranunlocked.com/<%= toc[i].sura %>/<%= range[0] %>">More Translations&hellip;</a>
+                    </div>
                   </div>
                 </div>
               </section>

@@ -16,7 +16,7 @@ const enQuran = Data.get('quran.en');
 router.get('/', function (req, res, next) {
   if (req.query.q) {
     var results = [];
-    if (req.query.q.match(/[a-z]/i))
+    if (req.query.q.match(/[a-z0-9\'\"\_\-]/ig))
       results = searchEnglish(req.query.q.trim());
     else
       results = searchArabic(req.query.q.trim());
@@ -70,16 +70,20 @@ function searchEnglish(qs) {
 
 function searchArabic(qs) {
   qs = qs.replace(/[\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0670]+/g, '');
+  qs = qs.replace(/[اءأآإ]/g, '[اءأآإ]');
+  qs = qs.replace(/[يىئ]/g, '[يىئ]');
+  qs = qs.replace(/[ؤو]/g, '[ؤو]');
   return search(qs, 'ar');
 }
 
 function search(qs, lang) {
   var results = [];
-
+  // search exact
   var q = new RegExp('(' + qs + ')', 'ig');
   results = results.concat(searchQ(q, lang));
-
-  var qt = qs.split(/\s+/);
+  // search proximity
+  var prevq = q;
+  var qt = qs.split(/[\s\-\_\,\.\']+/);
   q = '';
   for (var i = 0; i < qt.length; i++) {
     q += qt[i];
@@ -87,31 +91,69 @@ function search(qs, lang) {
       q += '.+';
   }
   q = new RegExp('(' + q + ')', 'ig');
-  results = results.concat(searchQ(q, lang).filter(function (value) {
-    var add = true;
-    for (var i = 0; i < results.length; i++) {
-      if (results[i].sura == value.sura && results[i].aya == value.aya) {
-        add = false;
-        break;
+  if ((prevq + lang) != (q + lang)) {
+    results = results.concat(searchQ(q, lang).filter(function (value) {
+      var add = true;
+      for (var i = 0; i < results.length; i++) {
+        if (results[i].sura == value.sura && results[i].aya == value.aya) {
+          add = false;
+          break;
+        }
       }
-    }
-    return add;
-  }));
+      return add;
+    }));
+  }
+  // search either or
+  var prevq = q;
+  var qt = qs.split(/[\s\-\_\,\.\']+/);
+  q = '';
+  for (var i = 0; i < qt.length; i++) {
+    q += qt[i];
+    if (i < qt.length-1)
+      q += '|';
+  }
+  q = new RegExp('(' + q + ')', 'ig');
+  if ((prevq + lang) != (q + lang)) {
+    results = results.concat(searchQ(q, lang).filter(function (value) {
+      var add = true;
+      for (var i = 0; i < results.length; i++) {
+        if (results[i].sura == value.sura && results[i].aya == value.aya) {
+          add = false;
+          break;
+        }
+      }
+      return add;
+    }));
+  }
 
   return results;
 }
 
 function searchQ(q, lang) {
+  console.log('searching for: ' + lang + ' ' + q);
   var results = [];
-  var searchable = (lang == 'en') ? enQuran : arQuran;
   if (lang == 'en') {
+    // search name
+    for (var i = 0; i < metadata.sura.length; i++) {
+      var text = 'Sura ' + (i + 1) + ' ' + metadata.sura[i].ename + ' ' + metadata.sura[i].tname + ' ' + metadata.sura[i].oname;
+      if (text.match(q)) {
+        results.push({
+          "sura": i+1,
+          "topics": ('Sura ' + (i+1) + ' ' + metadata.sura[i].tname).replace(q, '<em>$1</em>'),
+          "aya": 1,
+          "text": quran[i].ayas[0].text,
+          "trans": enQuran[i].ayas[0].text
+        });
+        break;
+      }
+    }
+    // search TOC
     for (var i = 0; i < toc.length; i++) {
-      if ((toc[i].topics + ' ' + toc[i].tags).toLowerCase().match(q)) {
+      if ((toc[i].topics + ' ' + toc[i].tags).match(q)) {
         var aya = toc[i].range.split('-')[0];
         results.push({
           "sura": toc[i].sura,
           "topics": toc[i].topics.replace(q, '<em>$1</em>'),
-          "tags": (toc[i].tags + '').replace(q, '<em>$1</em>'),
           "aya": aya,
           "text": quran[toc[i].sura-1].ayas[aya-1].text,
           "trans": enQuran[toc[i].sura-1].ayas[aya-1].text
@@ -120,9 +162,12 @@ function searchQ(q, lang) {
       }
     }
   }
+  // search text
+  var searchable = (lang == 'en') ? enQuran : arQuran;
   for (var i = 0; i < searchable.length; i++) {
     for (var j = 0; j < searchable[i].ayas.length; j++) {
-      if (searchable[i].ayas[j].text.toLowerCase().match(q))
+      var text = (i + 1) + ':' + (j + 1) + ' ' + searchable[i].ayas[j].text;
+      if (text.match(q))
         if (lang == 'en')
           results.push({
             "sura": i + 1,

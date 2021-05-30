@@ -14,6 +14,10 @@ const arQuran = Data.get('quran.clean');
 const enQuran = Data.get('quran.en');
 
 router.get('/', function (req, res, next) {
+  if (req.hostname == 'quranunlocked') {
+    res.redirect(301, 'https://quranataglance.com');
+    return;
+  }
   if (req.query.q) {
     var results = [];
     if (req.query.q.match(/[a-z0-9\'\"\_\-]/ig))

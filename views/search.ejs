@@ -9,7 +9,7 @@
   <link rel="image_src" href="/images/icon.png" />
   <link rel="apple-touch-icon" href="/images/icon.png" />
   <link rel="icon" href="/images/icon.png" />
-  <link rel="canonical" href="https://quranataglance.com" />
+  <link rel="canonical" href="https://quranataglance.com/?q=<%=q%>" />
 
   <meta name="encoding" content="UTF-8">
   <meta name="description" content="Quran search results for term: '<%= q %>'">
@@ -52,7 +52,7 @@
     <main class="search-results">
 
       <p>
-        Search results for: <%=q%>
+        Found <%= results.length %> results for term: <%=q%>
       </p>
 
       <ol>

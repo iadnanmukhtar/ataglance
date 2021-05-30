@@ -14,7 +14,7 @@ const arQuran = Data.get('quran.clean');
 const enQuran = Data.get('quran.en');
 
 router.get('/', function (req, res, next) {
-  if (req.hostname.match('quranunlocked')) {
+  if (!req.hostname.match('quranunlocked')) {
     res.redirect(301, 'https://quranataglance.com');
     return;
   }
@@ -92,7 +92,7 @@ function search(qs, lang) {
   for (var i = 0; i < qt.length; i++) {
     q += qt[i];
     if (i < qt.length-1)
-      q += '.+';
+      q += '.*?';
   }
   q = new RegExp('(' + q + ')', 'ig');
   if ((prevq + lang) != (q + lang)) {
@@ -134,7 +134,6 @@ function search(qs, lang) {
 }
 
 function searchQ(q, lang) {
-  console.log('searching for: ' + lang + ' ' + q);
   var results = [];
   if (lang == 'en') {
     // search name
@@ -143,7 +142,7 @@ function searchQ(q, lang) {
       if (text.match(q)) {
         results.push({
           "sura": i+1,
-          "topics": ('Sura ' + (i+1) + ' ' + metadata.sura[i].tname).replace(q, '<em>$1</em>'),
+          "topics": ('Sura ' + (i+1) + ' ' + metadata.sura[i].tname + ' (' + metadata.sura[i].ename + ')').replace(q, '<em>$1</em>'),
           "aya": 1,
           "text": quran[i].ayas[0].text,
           "trans": enQuran[i].ayas[0].text
@@ -157,7 +156,8 @@ function searchQ(q, lang) {
         var aya = toc[i].range.split('-')[0];
         results.push({
           "sura": toc[i].sura,
-          "topics": toc[i].topics.replace(q, '<em>$1</em>'),
+          "topics": 'Topics: ' + toc[i].topics.replace(q, '<em>$1</em>'),
+          "tags": (toc[i].tags ? toc[i].tags : '').replace(q, '<em>$1</em>'),
           "aya": aya,
           "text": quran[toc[i].sura-1].ayas[aya-1].text,
           "trans": enQuran[toc[i].sura-1].ayas[aya-1].text

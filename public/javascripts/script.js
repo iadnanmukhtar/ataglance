@@ -84,6 +84,9 @@ $(document).ready(function () {
                 content += '</sup>&nbsp;' + data.trans[i].text + ' ';
             }
             trans.html(content);
+            gtag('event', 'view', {
+                "topics": id
+            });
         });
     });
 

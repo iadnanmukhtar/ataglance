@@ -14,7 +14,8 @@ const arQuran = Data.get('quran.clean');
 const enQuran = Data.get('quran.en');
 
 router.get('/', function (req, res, next) {
-  if (!req.hostname.match('quranataglance')) {
+  if (!req.hostname.match(/quranataglance|localhost/)) {
+    console.log('redirecting');
     res.redirect(301, 'https://quranataglance.com');
     return;
   }

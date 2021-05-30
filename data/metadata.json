@@ -335,7 +335,7 @@
 			"ayas": 54,
 			"order": 58,
 			"rukus": 6,
-			"name": "سبإ",
+			"name": "سبأ",
 			"tname": "Saba",
 			"ename": "Sheba",
 			"type": "Meccan"
@@ -755,7 +755,7 @@
 			"ayas": 31,
 			"order": 98,
 			"rukus": 2,
-			"name": "الانسان",
+			"name": "الإنسان",
 			"tname": "Insan",
 			"ename": "Man",
 			"type": "Medinan"
@@ -775,7 +775,7 @@
 			"ayas": 40,
 			"order": 80,
 			"rukus": 2,
-			"name": "النبإ",
+			"name": "النبأ",
 			"tname": "Naba",
 			"ename": "The Announcement",
 			"type": "Meccan"

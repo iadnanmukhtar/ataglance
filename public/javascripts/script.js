@@ -32,12 +32,12 @@ $(document).ready(function () {
     function showBookmarksList() {
         var bookmarks = getBookmarks();
         var html = '';
-        html += '<ul><li><i class="fas fa-bookmark"></i> <a href="#top">Top</a></li>';
         if (bookmarks.length > 0) {
             for (var i = 0; i < bookmarks.length; i++) {
-                html += '<li><i data-id="' + bookmarks[i] + '" class="fas fa-bookmark"></i>&nbsp;' +
-                    '<a href="#TOPICHEAD_' + bookmarks[i] + '">' + bookmarks[i] + '</li>';
+                html += '<li><a class="dropdown-item" href="#TOPICHEAD_' + bookmarks[i]
+                    + '"><i class="fas fa-bookmark"></i>&nbsp;' + bookmarks[i] + '</li>';
             }
+            html += '<li><hr class="dropdown-divider"></li>'
         }
         html += '</ul>';
         $("#BOOKMARKS").html(html);

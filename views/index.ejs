@@ -73,12 +73,30 @@
 
     <main class="row">
 
-      <p class="fs-5">
+      <p class="col-12 fs-5">
         Easily grasp the structure of the Holy Quran by browsing the summary and description of its major themes, all in a form of the following table of contents.
       </p>
 
-      <!-- Quran -->
-      <div class="col-8 col-md-9">
+      <div class="col-12 dropdown mb-2">
+        <button class="btn btn-success dropdown-toggle w-100" type="button" id="suraList" data-bs-toggle="dropdown" aria-expanded="false">
+          Suras &amp; Bookmarks
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="suraList">
+          <div id="BOOKMARKS">
+          </div>          
+          <%
+            for (var i = 0; i < md.sura.length; i++) {
+          %>
+            <li><a class="dropdown-item" href="#S<%= (i+1) %>">
+              <% if (md.sura[i].type === 'Meccan') { %>🕋<% } else { %>🕌<% } %>
+              <%= i+1 %>. <%= md.sura[i].tname %> <span lang="ar"><%= md.sura[i].name %></span> 
+              </a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+
+      <div class="col-12">
       
       <% 
         var sura=0; 
@@ -140,36 +158,11 @@
         </div>
       </div>
 
-      <!-- Navbar -->
-      <div class="suranav col-4 col-md-3 text-muted">
-        <strong class="d-block h6 my-2 pb-2 border-bottom">Suras</strong>
-        <nav class="sticky-top navbar pt-3 align-items-self">
-          <small>
-
-          <div id="BOOKMARKS" class="mb-2">
-            <ul><li><i class="fas fa-bookmark"></i> <a href="#top">Top</a></li></ul>
-          </div>
-
-          <ol>
-          <%
-            for (var i=0; i<md.sura.length; i++) {
-          %>
-            <li>
-              <% if (md.sura[i].type === 'Meccan') { %>🕋<% } else { %>🕌<% } %>
-              <a href="#S<%= (i+1) %>"><%= md.sura[i].tname %></a>
-            </li>
-          <% } %>
-          </ol>
-
-          </small>
-        </nav>
-      </div>
-
     </main>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script -->
   <script src="https://kit.fontawesome.com/3c8decddde.js" crossorigin="anonymous"></script>
   <script src="/ataglance/javascripts/script.js"></script>
 

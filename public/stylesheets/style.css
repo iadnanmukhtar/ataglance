@@ -83,7 +83,7 @@ h2 {
 .text em,
 .trans em {
   font-style: normal;
-  color: blue;
+  background-color: lightgoldenrodyellow;
 }
 
 .search-results em {

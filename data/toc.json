@@ -4,13 +4,14 @@
         "range": "1-4",
         "topics": "Praise of God.",
         "ref": 1,
-        "tags": "god:mercy faith:judgementday"
+        "tags": "god:attributes god:mercy faith:judgementday"
     },
     {
         "sura": 1,
         "range": "5-7",
         "topics": "Believer's prayer for guidance.",
-        "ref": 2
+        "ref": 2,
+        "tags": "worship:supplication guidance misguidance belief:revelation believer:attitude god:mercy god:anger"
     },
     {
         "sura": 2,
@@ -21,7 +22,7 @@
     {
         "sura": 2,
         "range": "6-7",
-        "topics": "Unbelievers are blocked from receiving guidance.",
+        "topics": "Defiant disbelivers are blocked from receiving guidance.",
         "ref": 4
     },
     {
@@ -105,8 +106,9 @@
     {
         "sura": 2,
         "range": "45-46",
-        "topics": "God's help comes with patience and Prayer.",
-        "ref": 18
+        "topics": "God's help comes with patience and prayer.",
+        "ref": 18,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -291,7 +293,7 @@
     {
         "sura": 2,
         "range": "118-119",
-        "topics": "Unbelievers demand proof of God while His signs have already been made clear.",
+        "topics": "Defiant disbelivers demand proof of God while His signs have already been made clear.",
         "ref": 49
     },
     {
@@ -321,8 +323,9 @@
     {
         "sura": 2,
         "range": "127-129",
-        "topics": "Abraham: Humble prayer of Abraham and Ishmael while erecting the Kaᶜba.",
-        "ref": 54
+        "topics": "Abraham: Humble supplication of Abraham and Ishmael while erecting the Kaᶜba. Abraham's supplication for a prophet to be sent.",
+        "ref": 54,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -356,81 +359,87 @@
     },
     {
         "sura": 2,
-        "range": "142-143",
-        "topics": "God elevates the Muslims as the preferred nation symbolizing it with the change in the direction of prayer.",
-        "ref": 60
+        "range": "142-144",
+        "topics": "God elevates the Muslims as the preferred nation symbolizing it with the change in the direction of prayer toward the Kaᶜba in Makkah.",
+        "ref": 60,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "144-147",
-        "topics": "The Kaᶜba in Makkah was made the new Qibla.",
-        "ref": 61
+        "range": "145-147",
+        "topics": "The People of the Book will not follow your direction in prayer. They knowingly reject the prophet and the clear signs from God.",
+        "ref": 61,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "148-152",
-        "topics": "The order to face towards Kaᶜba as Qibla during Prayers.",
-        "ref": 62
+        "range": "148-150",
+        "topics": "The order to face towards the Kaᶜba in Makkah during prayers.",
+        "ref": 62,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 153,
-        "topics": "Prescription to seek God's help.",
-        "ref": 63
+        "range": "151-153",
+        "topics": "Be thankful that God has manifested the supplication of Abraham for a prophet. Prescription to seek God's help.",
+        "ref": 63,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 154,
-        "topics": "Martyrs are not dead.",
-        "ref": 64
+        "range": "154-157",
+        "topics": "Martyrs in the path of God are not dead. God will test the Believer's various trials. Truly guided show patience under trial awaiting reward in there Hereafter.",
+        "ref": 65,
+        "tags": "worship:supplication"
     },
     {
         "sura": 2,
-        "range": "155-157",
-        "topics": "God will test the Believer's belief.",
-        "ref": 65
+        "range": "158",
+        "topics": "Mounts Safa and Marwa are the symbols of God.",
+        "ref": 66,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 158,
-        "topics": "Safa and Marwah are the symbols of God.",
-        "ref": 66
+        "range": "159-162",
+        "topics": "The curse of God, the angels and all humankind is on those who conceal the truth and on the defiant disbelievers.",
+        "ref": 67,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "159-163",
-        "topics": "The curse of God, the angels and all humankind is on those who conceal the truth.",
-        "ref": 67
-    },
-    {
-        "sura": 2,
-        "range": 164,
-        "topics": "Signs from nature to recognize God.",
-        "ref": 68
+        "range": "163-164",
+        "topics": "There is none except the only and only God. Signs from nature to recognize God.",
+        "ref": 68,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "165-167",
-        "topics": "The polytheists will have severe punishment and the followers of misguided leaders will regret on the Day of Judgment.",
-        "ref": 69
+        "topics": "Those idols that the polytheists worshipped will disassociate with those who worship them on the Day of Judgement. The polytheist on that Day will be regretful.",
+        "ref": 69,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "168-169",
-        "topics": "Do not follow the footsteps of Satan.",
-        "ref": 70
+        "topics": "Eat what is good and lawful. Do not follow the footsteps of Satan.",
+        "ref": 70,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "170-171",
-        "topics": "Do not profess the faith blindly.",
-        "ref": 71
+        "topics": "Do not profess the faith blindly. A parable of disbelievers.",
+        "ref": 71,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "172-173",
-        "topics": "Prohibited food.",
-        "ref": 72
+        "topics": "Prohibition of dead meat, blood, pig meat, and what is slaughtered for the sake of other than God.",
+        "ref": 72,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -440,33 +449,31 @@
     },
     {
         "sura": 2,
-        "range": 177,
-        "topics": "Definition of righteousness?",
-        "ref": 74
+        "range": "177",
+        "topics": "True righteousness is belief, practice, and patience.",
+        "ref": 74,
+        "tags": "ayatulbirr righteousness"
     },
     {
         "sura": 2,
         "range": "178-179",
-        "topics": "The Islamic laws of retribution.",
-        "ref": 75
+        "topics": "Commandment of legal retribution and blood money. Legal retribution saves lives.",
+        "ref": 75,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "180-182",
-        "topics": "The commandment of God to make a \"Will\".",
-        "ref": 76
+        "topics": "Commandment to make a living will and testament.",
+        "ref": 76,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "183-184",
-        "topics": "The obligation of Fasting.",
-        "ref": 77
-    },
-    {
-        "sura": 2,
-        "range": 185,
-        "topics": "The revelation of the Quran in the month of Ramadan.",
-        "ref": 78
+        "range": "183-185",
+        "topics": "Commandment of fasting in the month of Ramadan. Purpose of fasting is to build God-consciousness.",
+        "ref": 77,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -476,57 +483,45 @@
     },
     {
         "sura": 2,
-        "range": 187,
-        "topics": "Nights of the Fasting month and timings of fasting.",
-        "ref": 80
+        "range": "187",
+        "topics": "Intimate relationship with one's spouse is allowed during the nights of the fasting month. Timings of fasting.",
+        "ref": 80,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 188,
-        "topics": "Bribe is a sin.",
-        "ref": 81
+        "range": "188",
+        "topics": "Prohibition of bribery. Do not bribe the rulers.",
+        "ref": 81,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 189,
-        "topics": "The moon is to determine time periods.",
-        "ref": 82
+        "range": "189",
+        "topics": "The moon is to determine time periods. Righteousness is God-conciousness. Enter homes from its proper entrances.",
+        "ref": 82,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "190-193",
-        "topics": "Order to fight for a just cause.",
-        "ref": 83
+        "range": "190-194",
+        "topics": "Persecution is worse than killing. Commandment to fight those who fight you but do not transgress bounds.",
+        "ref": 83,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 194,
-        "topics": "Retaliation in the sacred months.",
-        "ref": 84
+        "range": "195",
+        "topics": "Commandment to give charity but not in excess.",
+        "ref": 85,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 195,
-        "topics": "Order to give charity.",
-        "ref": 85
-    },
-    {
-        "sura": 2,
-        "range": 196,
-        "topics": "Hajj and Umrah (pilgrimage to Makkah).",
-        "ref": 86
-    },
-    {
-        "sura": 2,
-        "range": "197-202",
-        "topics": "Restrictions during Hajj and performance of Hajj.",
-        "ref": 87
-    },
-    {
-        "sura": 2,
-        "range": 203,
-        "topics": "Remembrance of God and the stay in Mina.",
-        "ref": 88
+        "range": "196-203",
+        "topics": "Commandment for Pilgrimage (Ḥajj and ᶜUmra). Supplication for good in this world and the Hereafter.",
+        "ref": 86,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -537,20 +532,23 @@
     {
         "sura": 2,
         "range": "208-210",
-        "topics": "O believers enter into Islam completely.",
-        "ref": 90
+        "topics": "O believers enter into Islam completely and do not deviate from it.",
+        "ref": 90,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "211-212",
-        "topics": "The believers will rank over the disbelievers.",
-        "ref": 91
+        "topics": "The world has been made seem beautiful to the defiant disbelievers. The believers will rank over the disbelievers.",
+        "ref": 91,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 213,
-        "topics": "Mankind was one nation having one religion.",
-        "ref": 92
+        "range": "213",
+        "topics": "Humankind was one nation. Humankind began to differ in jealous animosity when prophets brought forth guidance from God.",
+        "ref": 92,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -560,39 +558,45 @@
     },
     {
         "sura": 2,
-        "range": "215-216",
-        "topics": "Charity and fighting (for just cause) is made obligatory.",
-        "ref": 94
+        "range": "215",
+        "topics": "Charity is to be spent on the kith and kin and the needy.",
+        "ref": 94,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "217-218",
-        "topics": "Fighting in the sacred month and punishment for who turn back from Islam.",
-        "ref": 95
+        "range": "216-218",
+        "topics": "You may detest something but it may be better for you. Fighting in the sacred month and punishment for who turn back from Islam.",
+        "ref": 95,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "219-220",
-        "topics": "Drinking and gambling are sinful and dealings with orphans.",
-        "ref": 96
+        "topics": "Prohibition of drinking and gambling. Dealings with orphans.",
+        "ref": 96,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 221,
-        "topics": "It is unlawful to marry a polytheist.",
-        "ref": 97
+        "range": "221",
+        "topics": "Prohibition to marry polytheists.",
+        "ref": 97,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "222-223",
-        "topics": "Question about menstruation.",
-        "ref": 98
+        "topics": "Prohibition of intimate relations with a menstruating spouse.",
+        "ref": 98,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "224-225",
-        "topics": "Do not misuse oaths taken in the name of God.",
-        "ref": 99
+        "topics": "Prohibition of using God's name in vain.",
+        "ref": 99,
+        "tags": ""
     },
     {
         "sura": 2,
@@ -602,207 +606,164 @@
     },
     {
         "sura": 2,
-        "range": 228,
-        "topics": "Waiting period after divorce.",
-        "ref": 101
+        "range": "228-232",
+        "topics": "Laws relating to divorce and the three divorces.",
+        "ref": 102,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "229-230",
-        "topics": "Laws relating to divorce.",
-        "ref": 102
+        "range": "233",
+        "topics": "Requirement of breast feeding babies.",
+        "ref": 105,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 231,
-        "topics": "Treatment to the divorced women.",
-        "ref": 103
-    },
-    {
-        "sura": 2,
-        "range": 232,
-        "topics": "There is no restriction on divorcees to remarry.",
-        "ref": 104
-    },
-    {
-        "sura": 2,
-        "range": "233-234",
-        "topics": "Requirement of breast feeding babies and waiting period for widows.",
-        "ref": 105
-    },
-    {
-        "sura": 2,
-        "range": 235,
-        "topics": "There is no restriction on remarriage of widows.",
-        "ref": 106
+        "range": "234-235",
+        "topics": "Laws relating to widows and the waiting period after death of a spouse.",
+        "ref": 106,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "236-237",
-        "topics": "Dowry and divorce.",
-        "ref": 107
+        "topics": "Laws relating divorce before consummation of marriage.",
+        "ref": 107,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "238-239",
-        "topics": "Guarding the Prayers.",
-        "ref": 108
+        "topics": "Commandment to guard the prayers.",
+        "ref": 108,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "240-242",
-        "topics": "Obligation of executing the \"Last Will and Testament.",
-        "ref": 109
+        "topics": "Laws relating to care for widows.",
+        "ref": 109,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "243-244",
-        "topics": "There is no escape from death.",
-        "ref": 110
+        "topics": "There is no escape from death. Story of the Dead People from the Israelites.",
+        "ref": 110,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "245-246",
-        "topics": "Spending in the Way of God and Israelites demand for a king.",
-        "ref": 111
+        "range": "245-247",
+        "topics": "Samuel: Israelites demand for a king. God appointed Saul as the king of Israelites.",
+        "ref": 111,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "247-248",
-        "topics": "God appointed Sol to be their king.",
-        "ref": 112
+        "range": "249-252",
+        "topics": "David: The story of David and Goliath. Victory is not by numbers by the permission of God. David's prophethood.",
+        "ref": 113,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 249,
-        "topics": "Test of Israelites' belief and obedience.",
-        "ref": 113
+        "range": "253",
+        "topics": "Elevated ranks of the messengers such as Moses and Jesus. The nations of pious prophets differed with each other.",
+        "ref": 116,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "250-251",
-        "topics": "Victory is not by numbers and prayer of the believers for victory.",
-        "ref": 114
+        "range": "254",
+        "topics": "Commandment to spending in charity before death.",
+        "ref": 117,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 252,
-        "topics": "Reaffirming the prophethood of Muhammad (pbuh).",
-        "ref": 115
-    },
-    {
-        "sura": 2,
-        "range": 253,
-        "topics": "Ranks of the messengers.",
-        "ref": 116
-    },
-    {
-        "sura": 2,
-        "range": 254,
-        "topics": "Spending in charity.",
-        "ref": 117
-    },
-    {
-        "sura": 2,
-        "range": 255,
+        "range": "255",
         "topics": "God's attributes and the Verse of the Throne.",
-        "ref": 118
+        "ref": 118,
+        "tags": "ayatulkursi"
     },
     {
         "sura": 2,
         "range": "256-257",
-        "topics": "There is no compulsion in religion; Allies of God vs. allies of Satan.",
-        "ref": 119
+        "topics": "There is no compulsion in religion. Allies of God vs. allies of Satan.",
+        "ref": 119,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 258,
-        "topics": "Confrontation of Abraham and the King Nimrod.",
-        "ref": 120
+        "range": "258",
+        "topics": "Abraham: Abraham argues about his Lord with Nimrod.",
+        "ref": 120,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 259,
-        "topics": "Example of bringing dead to life.",
-        "ref": 121
+        "range": "259",
+        "topics": "Ezra: The story of Ezra and how God brings the dead to life.",
+        "ref": 121,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 260,
-        "topics": "Abraham's question of life after death.",
-        "ref": 122
+        "range": "260",
+        "topics": "Abraham: The story of Abraham's asking God how he brings the dead to life.",
+        "ref": 122,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "261-263",
-        "topics": "The parable of spending in charity.",
-        "ref": 123
+        "topics": "The parable of spending in charity. The reward or return for charity is manifold multitudes.",
+        "ref": 123,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 264,
-        "topics": "What makes charity worthless.",
-        "ref": 124
-    },
-    {
-        "sura": 2,
-        "range": "265-266",
-        "topics": "Charity vs. Showing off.",
-        "ref": 125
+        "range": "264-266",
+        "topics": "Charitable Giving vs. Showing off. Reward for charity invalidated after hurtful reminders of it.",
+        "ref": 124,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "267-269",
-        "topics": "Spend the best portion of your wealth; God's promise vs. Satan's promise.",
-        "ref": 126
+        "topics": "Spend the best portion of your wealth in charity. God promises you forgiveness while Satan frightens you of poverty.",
+        "ref": 126,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "270-273",
-        "topics": "Giving charity in public and private; Who is eligible for charity?",
-        "ref": 127
+        "range": "270-274",
+        "topics": "Giving charity in public and private and its reward; Charity for the poor to proud to ask for a handout.",
+        "ref": 127,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": 274,
-        "topics": "Reward for charity.",
-        "ref": 128
+        "range": "275-281",
+        "topics": "Prohibition of usury and permissibility of trade.",
+        "ref": 129,
+        "tags": ""
     },
     {
         "sura": 2,
-        "range": "275-276",
-        "topics": "Prohibition of usury.",
-        "ref": 129
-    },
-    {
-        "sura": 2,
-        "range": "277-281",
-        "topics": "Taking usury is like declaring war against God and His messenger.",
-        "ref": 130
-    },
-    {
-        "sura": 2,
-        "range": 282,
-        "topics": "All business dealings must be reduced to writing - loans, debts, and buying on credit; Witnesses are required in all transactions.",
-        "ref": 131
-    },
-    {
-        "sura": 2,
-        "range": 283,
-        "topics": "If writing is not possible, take a security deposit - pledge/mortgage.",
-        "ref": 132
-    },
-    {
-        "sura": 2,
-        "range": 284,
-        "topics": "God will call to account.",
-        "ref": 133
+        "range": "282-284",
+        "topics": "Laws relating to contracts. Contracts must be in writing and have witnesses. God will call to account whether you conceal or reveal.",
+        "ref": 131,
+        "tags": ""
     },
     {
         "sura": 2,
         "range": "285-286",
-        "topics": "True belief of prophets and Muslims; Believer's supplication.",
-        "ref": 134
+        "topics": "Articles of belief. Believer's supplication for God to overlook faults and lift burdens.",
+        "ref": 134,
+        "tags": ""
     },
     {
         "sura": 3,
@@ -1455,7 +1416,7 @@
     {
         "sura": 4,
         "range": "101-104",
-        "topics": "Salat-al-Qasr: Shortening of Prayers during travel. Prayers in the state of war. Prayers is obligatory at its prescribed times.",
+        "topics": "Salat-al-Qasr: Shortening of prayers during travel. prayers in the state of war. prayers is obligatory at its prescribed times.",
         "ref": 243
     },
     {
@@ -1605,7 +1566,7 @@
     {
         "sura": 5,
         "range": "12-13",
-        "topics": "Prayers and Charity were obligatory for Jews. The Jews' habit of being deceitful.",
+        "topics": "prayers and Charity were obligatory for Jews. The Jews' habit of being deceitful.",
         "ref": 268
     },
     {
@@ -1899,7 +1860,7 @@
     {
         "sura": 6,
         "range": "71-73",
-        "topics": "The believers are commanded to become Muslims, to establish Prayers and to fear God Alone.",
+        "topics": "The believers are commanded to become Muslims, to establish prayers and to fear God Alone.",
         "ref": 317
     },
     {
@@ -2037,7 +1998,7 @@
     {
         "sura": 6,
         "range": "161-165",
-        "topics": "Declare: \"My Prayers, my devotion, my life and my death are all for God.",
+        "topics": "Declare: \"My prayers, my devotion, my life and my death are all for God.",
         "ref": 340
     },
     {
@@ -3423,7 +3384,7 @@
     {
         "sura": 17,
         "range": "78-84",
-        "topics": "Five times daily Prayers and an extra prayer for the Holy Prophet. The Quran is a healing and mercy for the believers.",
+        "topics": "Five times daily prayers and an extra prayer for the Holy Prophet. The Quran is a healing and mercy for the believers.",
         "ref": 571
     },
     {
@@ -3465,7 +3426,7 @@
     {
         "sura": 17,
         "range": "105-111",
-        "topics": "The Quran is revealed in truth and with the truth it has come down in sections to suit each occasion, for easy deliberation. Offer Prayers neither too loud nor in too low a voice, adopt the middle course.",
+        "topics": "The Quran is revealed in truth and with the truth it has come down in sections to suit each occasion, for easy deliberation. Offer prayers neither too loud nor in too low a voice, adopt the middle course.",
         "ref": 578
     },
     {
@@ -4563,7 +4524,7 @@
     {
         "sura": 29,
         "range": "45-51",
-        "topics": "Prayers keeps one away from shameful deeds and Do not argue with the People of the Book except in good taste.",
+        "topics": "prayers keeps one away from shameful deeds and Do not argue with the People of the Book except in good taste.",
         "ref": 761
     },
     {
@@ -4917,7 +4878,7 @@
     {
         "sura": 35,
         "range": "27-37",
-        "topics": "Those who recite the Quran, establish Prayers and give charity may hope for God's blessings and rewards. For disbelievers, a painful punishment in the hellfire forever.",
+        "topics": "Those who recite the Quran, establish prayers and give charity may hope for God's blessings and rewards. For disbelievers, a painful punishment in the hellfire forever.",
         "ref": 820
     },
     {
@@ -5385,7 +5346,7 @@
     {
         "sura": 42,
         "range": "30-43",
-        "topics": "Whatever afflictions befall upon people are the result of their own misdeeds. True believers are those who establish Prayers, give charity and defend themselves when oppressed.",
+        "topics": "Whatever afflictions befall upon people are the result of their own misdeeds. True believers are those who establish prayers, give charity and defend themselves when oppressed.",
         "ref": 898
     },
     {
@@ -5943,7 +5904,7 @@
     {
         "sura": 60,
         "range": "4-6",
-        "topics": "Abraham and his companions are excellent examples for the believers. Prayer of Abraham and his companions.",
+        "topics": "Abraham and his companions are excellent examples for the believers. prayer of Abraham and his companions.",
         "ref": 991
     },
     {
@@ -5997,7 +5958,7 @@
     {
         "sura": 62,
         "range": "9-11",
-        "topics": "Commandment relating to the obligation of Friday Prayers.",
+        "topics": "Commandment relating to the obligation of Friday prayers.",
         "ref": 1000
     },
     {
@@ -6171,7 +6132,7 @@
     {
         "sura": 74,
         "range": "32-56",
-        "topics": "Actions which lead to hellfire are: Not offering Prayers, not feeding the poor, wasting time in vain talk and denying the Day of Judgment.",
+        "topics": "Actions which lead to hellfire are: Not offering prayers, not feeding the poor, wasting time in vain talk and denying the Day of Judgment.",
         "ref": 1029
     },
     {
@@ -6435,7 +6396,7 @@
     {
         "sura": 98,
         "range": "1-8",
-        "topics": "The people of the Book did not get divided into sects until after receiving guidance. They were also commanded to establish Prayers and pay Charity.",
+        "topics": "The people of the Book did not get divided into sects until after receiving guidance. They were also commanded to establish prayers and pay Charity.",
         "ref": 1073
     },
     {

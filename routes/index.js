@@ -5,11 +5,11 @@ const Config = require('../lib/Config');
 
 const router = express.Router();
 
+var quran = Data.get('quran');
 var toc = Data.get('toc');
 for (var i = 0; i < toc.length; i++)
   toc[i].ref = i + 1;
 const metadata = Data.get('metadata');
-const quran = Data.get('quran');
 const arQuran = Data.get('quran.clean');
 const enQuran = Data.get('quran.en');
 
@@ -90,8 +90,9 @@ router.post('/u', function (req, res, next) {
     res.status(403);
     return;
   }
-  var result = Data.updateTOC(toc, req.body);
+  var result = Data.updateTOC(toc, quran, req.body);
   toc = Data.get('toc');
+  quran = Data.get('quran');
   res.json(result);
 });
 

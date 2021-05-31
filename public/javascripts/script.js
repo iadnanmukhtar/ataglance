@@ -75,7 +75,8 @@ $(document).ready(function () {
         }).done(function (data) {
             var content = '';
             for (var i = 0; i < data.text.length; i++) {
-                content += data.text[i].text + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';
+                content += (data.text[i].key ? '<em>' : '') + data.text[i].text + (data.text[i].key ? '</em>' : '')
+                    + '&nbsp;<span title="' + data.text[i].index + '">۝</span> ';
             }
             text.html(content);
             content = '';
@@ -85,7 +86,8 @@ $(document).ready(function () {
                     content += id.split('_')[0] + ':' + data.trans[i].index;
                 else
                     content += data.trans[i].index;
-                content += '</sup>&nbsp;' + data.trans[i].text + ' ';
+                content += '</sup>&nbsp;' + (data.text[i].key ? '<em>' : '') + data.trans[i].text
+                    + (data.text[i].key ? '</em>' : '') + ' ';
             }
             trans.html(content);
             gtag('event', 'view', {

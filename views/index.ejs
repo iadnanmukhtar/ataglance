@@ -109,7 +109,7 @@
           for (var r = range[0]; r <= range[1]; r++)
             anchors.push(toc[i].sura + '_' + r);
           if (toc[i].sura != sura) { 
-            sura = toc[i].sura; 
+            sura = toc[i].sura;
             if (sura > 1) { %>
               </div>
             <% } %>
@@ -150,6 +150,7 @@
                     </div>
                     <% if (admin) { %>
                     <div class="admin-ctrls" style="display:none">
+                      Keys: <span id="TOPICKEYS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].keys %></span><br>
                       Tags: <span id="TOPICTAGS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].tags %></span><br>
                       Range: <span id="TOPICRANGE_<%= toc[i].ref %>" contenteditable="true"><%= toc[i].range %></span>
                       <small><a class="admin-ctrl-update" data-ref="<%= toc[i].ref %>" href="#">Update</a></small>
@@ -199,10 +200,12 @@
             var ref = $(this).data('ref');
             var topics = $('#TOPICREF_' + ref).text();
             var range = $('#TOPICRANGE_' + ref).text();
+            var keys = $('#TOPICKEYS_' + ref).text();
             var tags = $('#TOPICTAGS_' + ref).text();
             $.post('/u', {
                 ref: ref,
                 range: range,
+                keys: keys,
                 topics: topics,
                 tags: tags
             }, function (data) {

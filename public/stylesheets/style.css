@@ -72,11 +72,18 @@ h2 {
   font-weight: bold;
 }
 
-.text, :lang(ar) {
+.text, 
+:lang(ar) {
   direction: rtl;
   font-family: hafs;
   text-align: justify;
   font-size: 1.3rem;
+}
+
+.text em,
+.trans em {
+  font-style: normal;
+  color: blue;
 }
 
 .search-results em {

@@ -63,8 +63,8 @@
           <% if (results[i].topics) { %>
           <div class="col-12 trans"><%- results[i].topics %></div>
           <% } 
-             if (results[i].topics) { %>
-            <div class="col-12 trans"><%- results[i].tags %></div>
+             if (results[i].tags) { %>
+            <div class="col-12 trans tags"><%- results[i].tags %></div>
           <% } %>
           <div class="col-md-6 col-12 trans">
             <sup><%=results[i].sura%>:<%=results[i].aya%></sup>&nbsp;<%- results[i].trans %>

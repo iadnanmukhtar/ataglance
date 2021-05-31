@@ -41,6 +41,32 @@ router.get('/', function (req, res, next) {
     });
 });
 
+router.get('/t/:tag', function (req, res, next) {
+  var tag = new RegExp('(' + req.params.tag + ')', 'ig');
+  var results = [];
+  // search TOC
+  for (var i = 0; i < toc.length; i++) {
+    if ((toc[i].tags + '').match(tag)) {
+      var aya = toc[i].range.split('-')[0];
+      results.push({
+        "sura": toc[i].sura,
+        "topics": 'Topics: ' + toc[i].topics,
+        "tags": (toc[i].tags ? toc[i].tags : '').replace(tag, '<em>$1</em>'),
+        "aya": aya,
+        "text": quran[toc[i].sura - 1].ayas[aya - 1].text,
+        "trans": enQuran[toc[i].sura - 1].ayas[aya - 1].text
+      });
+    }
+  }
+  res.render('search', {
+    q: req.params.tag,
+    results: results,
+    quran: quran,
+    equran: enQuran,
+    md: metadata
+  });
+});
+
 router.get('/r/:q', function (req, res, next) {
   var m = req.params.q.match(/^(\d+)[:_]?(\d+)?-?(\d+)?/);
   var sura = m[1];
@@ -92,7 +118,7 @@ function search(qs, lang) {
   q = '';
   for (var i = 0; i < qt.length; i++) {
     q += qt[i];
-    if (i < qt.length-1)
+    if (i < qt.length - 1)
       q += '.*?';
   }
   q = new RegExp('(' + q + ')', 'ig');
@@ -114,7 +140,7 @@ function search(qs, lang) {
   q = '';
   for (var i = 0; i < qt.length; i++) {
     q += qt[i];
-    if (i < qt.length-1)
+    if (i < qt.length - 1)
       q += '|';
   }
   q = new RegExp('(' + q + ')', 'ig');
@@ -142,13 +168,12 @@ function searchQ(q, lang) {
       var text = 'Sura ' + (i + 1) + ' ' + metadata.sura[i].ename + ' ' + metadata.sura[i].tname + ' ' + metadata.sura[i].oname;
       if (text.match(q)) {
         results.push({
-          "sura": i+1,
-          "topics": ('Sura ' + (i+1) + ' ' + metadata.sura[i].tname + ' (' + metadata.sura[i].ename + ')').replace(q, '<em>$1</em>'),
+          "sura": i + 1,
+          "topics": ('Sura ' + (i + 1) + ' ' + metadata.sura[i].tname + ' (' + metadata.sura[i].ename + ')').replace(q, '<em>$1</em>'),
           "aya": 1,
           "text": quran[i].ayas[0].text,
           "trans": enQuran[i].ayas[0].text
         });
-        break;
       }
     }
     // search TOC
@@ -160,10 +185,9 @@ function searchQ(q, lang) {
           "topics": 'Topics: ' + toc[i].topics.replace(q, '<em>$1</em>'),
           "tags": (toc[i].tags ? toc[i].tags : '').replace(q, '<em>$1</em>'),
           "aya": aya,
-          "text": quran[toc[i].sura-1].ayas[aya-1].text,
-          "trans": enQuran[toc[i].sura-1].ayas[aya-1].text
+          "text": quran[toc[i].sura - 1].ayas[aya - 1].text,
+          "trans": enQuran[toc[i].sura - 1].ayas[aya - 1].text
         });
-        break;
       }
     }
   }

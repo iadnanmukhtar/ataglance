@@ -98,8 +98,9 @@
       <div class="col-12">
       
       <% 
-        var sura=0; 
-        for (var i=0; i < toc.length; i++) { 
+        var tags = false;
+        var sura = 0; 
+        for (var i = 0; i < toc.length; i++) { 
           var id = toc[i].sura + '_' + toc[i].range;
           var range = (toc[i].range + '').split('-');
           if (range.length == 1)
@@ -123,9 +124,27 @@
                 <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
                   <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
                   <div class="col">
-                    <div id="TOPICREF_<%= toc[i].ref %>" class="topic">
-                      <i data-id="<%= id %>" class="me-2 far fa-bookmark"></i><a href="#TOPICHEAD_<%= id %>"><%= toc[i].topics %></a>
+                    <div id="TOPICREF_<%= toc[i].ref %>" class="topics">
+                      <i data-id="<%= id %>" class="me-2 far fa-bookmark"></i>
+                      <a href="#TOPICHEAD_<%= id %>"><%= toc[i].topics %></a>
                     </div>
+                    <%
+                      if (tags && toc[i].tags) {
+                    %>
+                    <div class="tags">
+                      <i class="me-2 fas fa-hashtag"></i>
+                      <%
+                          var tags = toc[i].tags.split(/\s+/g);
+                          for (var t = 0; t < tags.length; t++) {
+                      %>
+                        <a class="tag"><%= tags[t] %></a>
+                      <%
+                          }
+                      %>
+                        </div>
+                      <%
+                        }
+                      %>
                     <div class="ref d-block d-sm-none mt-1">
                       <a href="#top"><i class="me-2 far fa-hand-point-up"></i></a><small><%= sura %>:<%= toc[i].range %></small>
                     </div>
@@ -171,7 +190,7 @@
 
     <% if (admin) { %>
       <script>
-        $('.accordion-item .topic').dblclick(function () {
+        $('.accordion-item .topics').dblclick(function () {
             $(this).attr('contenteditable', 'true');
             $(this).parent().find('.admin-ctrls').show();
         });

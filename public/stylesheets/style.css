@@ -28,13 +28,29 @@ h2 {
   font-size: 0.9rem;
 }
 
-.topic a {
+.topics a,
+.tags,
+.tags a {
   text-decoration: none;
   color: inherit;
 }
 
+.tags,
+.tags a {
+  z-index: 0;
+  font-size: 0.5rem!important;
+  color: gray;
+}
+
+.tags a:hover,
+.tags a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .far, .fas {
   color: darkred;
+  width: 15px;
 }
 
 .admin-ctrls {

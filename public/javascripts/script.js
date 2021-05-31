@@ -61,6 +61,10 @@ $(document).ready(function () {
         showBookmarksList();
     });
 
+    $('.tag').click(function () {
+        location.href = '/t/' + $(this).html();
+    });
+
     $('.accordion-header').click(function () {
         var topic = $(this);
         var text = $(this).parent().find('.accordion-body .text');

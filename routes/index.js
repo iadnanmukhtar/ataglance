@@ -97,6 +97,7 @@ router.post('/u', function (req, res, next) {
 });
 
 function searchEnglish(qs) {
+  qs = qs.replace(/[!"#$%&'()*+,\-.\/:;<=>?@\[\]\^_`{|}~]+/g, '');
   return search(qs, 'en');
 }
 
@@ -180,7 +181,7 @@ function searchQ(q, lang) {
     // search TOC
     for (var i = 0; i < toc.length; i++) {
       if ((toc[i].topics + ' ' + toc[i].tags).match(q)) {
-        var aya = toc[i].range.split('-')[0];
+        var aya = (toc[i].range + '').split('-')[0];
         results.push({
           "sura": toc[i].sura,
           "topics": 'Topics: ' + toc[i].topics.replace(q, '<em>$1</em>'),

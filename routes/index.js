@@ -95,7 +95,7 @@ router.post('/u', function (req, res, next) {
 });
 
 function searchEnglish(qs) {
-  qs = qs.replace(/[!"#$%&'()*+,\-.\/:;<=>?@\[\]\^_`{|}~]+/g, '');
+  qs = qs.replace(/[!"#$%&'()*+,\-.\/;<=>?@\[\]\^_`{|}~]+/g, '');
   return search(qs, 'en');
 }
 

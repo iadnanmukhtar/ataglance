@@ -5930,683 +5930,713 @@
     },
     {
         "sura": 57,
-        "range": "1-10",
-        "topics": "All that is in the heavens and earth glorifies God, Who created the heavens and earth in six periods and has the knowledge of everything. Those who spend in charity will be richly rewarded.",
-        "ref": 962
+        "range": "1-6",
+        "topics": "All that is in the heavens and earth glorifies God, Who created the heavens and earth in six periods and is the owner of all creation has the knowledge of everything.",
+        "ref": 962,
+        "tags": ""
+    },
+    {
+        "ref": 963,
+        "range": "8-10",
+        "keys": "",
+        "topics": "To God belongs all treasures. The rank of those who spent in charity before the victory. Those who spent in charity will be richly rewarded.",
+        "tags": "",
+        "sura": 57
     },
     {
         "sura": 57,
-        "range": "11-19",
-        "topics": "On that day, the true believers will have their light shining before them while the hypocrites will have their fate no different than the disbelievers. Those who spend in charity will be repaid many fold and also be given liberal reward besides it.",
-        "ref": 963
+        "range": "11-15",
+        "topics": "On that day, the true believers will have their light shining before them while the hypocrites will have their fate no different than the disbelievers.",
+        "ref": 964,
+        "tags": ""
+    },
+    {
+        "ref": 965,
+        "range": "16-19",
+        "keys": "16",
+        "topics": "Isn't it time that your hearts humble at the remembrance of God? Those who spend in charity will be repaid many fold and also be given liberal reward besides it.",
+        "tags": "",
+        "sura": 57
     },
     {
         "sura": 57,
         "range": "20-25",
         "topics": "Life of this world is but play, amusement and illusion. Do not grieve for the things that you miss, nor overjoy at what you gain.",
-        "ref": 964
+        "ref": 966,
+        "keys": "20 21",
+        "tags": ""
     },
     {
         "sura": 57,
-        "range": "26-29",
-        "topics": "prophets Noah, Abraham and Jesus were sent for guidance to the Right Way. As for the monasticism, people instituted it themselves.",
-        "ref": 965
+        "range": "26-27",
+        "topics": "Prophets Noah, Abraham, and Jesus were sent for guidance to the Right Way. As for the monasticism, people instituted it themselves.",
+        "ref": 967,
+        "tags": ""
+    },
+    {
+        "ref": 968,
+        "range": "28-29",
+        "keys": "",
+        "topics": "Believers will receiver a double portion of God's mercy. Bounty of God is granted to those who He wills.",
+        "tags": "",
+        "sura": 57
     },
     {
         "sura": 58,
         "range": "1-6",
         "topics": "The pagan practice of divorce through 'Dhihār' (calling his wife as his mother) is prohibited and Penalty for practicing 'Dhihār'.",
-        "ref": 966
+        "ref": 969
     },
     {
         "sura": 58,
         "range": "7-13",
         "topics": "God is Omnipresent, if three persons converse in secret, He is the fourth of them. Secret counsels are forbidden except about virtue and piety. Conspiring in secret is the work of Satan. Etiquette of holding a meeting. The order to spend in charity before consulting the Messenger in private.",
-        "ref": 967
+        "ref": 970
     },
     {
         "sura": 58,
         "range": "14-22",
         "topics": "People who befriend those who are under the wrath of God will be severely punished. True believers do not befriend those who oppose God and His Messenger.",
-        "ref": 968
+        "ref": 971,
+        "keys": "22",
+        "tags": ""
     },
     {
         "sura": 59,
         "range": "1-5",
         "topics": "Jewish tribe of Banu Nadhīr in Madina is given the order of exile for their mutiny against new Muslim state.",
-        "ref": 969,
+        "ref": 972,
         "tags": ""
     },
     {
         "sura": 59,
         "range": "6-10",
         "topics": "Distribution of the belongings of Banu Nadhīr. Good qualities of true Muslim immigrants to Madina and that of the Ansār (the residents of Madina). Supplication to shed resentment from hearts against all believers.",
-        "ref": 970,
+        "ref": 973,
         "keys": "7 10",
         "tags": "dua"
     },
     {
         "sura": 59,
         "range": "11-17",
-        "topics": "The hypocrites' conspiracy with the People of the Book. Parable of a Satan vs. a disbeliever.",
-        "ref": 971
+        "topics": "The hypocrites' conspiracy with the People of the Book. Parable of a Satan vs. a defiant disbeliever.",
+        "ref": 974,
+        "tags": ""
     },
     {
         "sura": 59,
-        "range": "18-20",
-        "topics": "Let each soul see what it is sending for the Hereafter.",
-        "ref": 972
-    },
-    {
-        "sura": 59,
-        "range": 21,
-        "topics": "The Quran could even affect a mountain.",
-        "ref": 973
+        "range": "18-21",
+        "topics": "Let each soul see what it is sending forth to the Hereafter. Even a mountain would crumble in humility upon receiving the Quran.",
+        "ref": 975,
+        "keys": "18 19 20 21",
+        "tags": ""
     },
     {
         "sura": 59,
         "range": "22-24",
         "topics": "Fifteen exclusive attributes of God.",
-        "ref": 974
+        "ref": 976,
+        "keys": "22 23 24",
+        "tags": ""
     },
     {
         "sura": 60,
         "range": "1-3",
         "topics": "Do not befriend those who are enemies of God and the Muslims.",
-        "ref": 975
+        "ref": 977
     },
     {
         "sura": 60,
         "range": "4-6",
         "topics": "Abraham and his companions are excellent examples for the believers. prayer of Abraham and his companions.",
-        "ref": 976
+        "ref": 978
     },
     {
         "sura": 60,
         "range": "7-9",
         "topics": "Exception to the prohibition of friendship with disbelievers who had neither fought against the believers nor expelled them from their homes.",
-        "ref": 977
+        "ref": 979
     },
     {
         "sura": 60,
         "range": "10-11",
         "topics": "As for women that become believers, test their Faith, and if you find them truthful do not return them to their unbelieving husbands.",
-        "ref": 978
+        "ref": 980
     },
     {
         "sura": 60,
         "range": 12,
         "topics": "Women's oath of allegiance.",
-        "ref": 979
+        "ref": 981
     },
     {
         "sura": 60,
         "range": 13,
         "topics": "Do not befriend any with whom God is angry.",
-        "ref": 980
+        "ref": 982
     },
     {
         "sura": 61,
         "range": "1-9",
         "topics": "O believers, do not say something that you don't do. The Prophet Jesus gave the good news of a Messenger coming after him whose name would be Ahmed (another name of the Prophet Muhammad, pbuh).",
-        "ref": 981
+        "ref": 983
     },
     {
         "sura": 61,
         "range": "10-14",
         "topics": "A bargain to save oneself from the hellfire. Like the disciples of Jesus, believers are commanded to be the helpers of God",
-        "ref": 982
+        "ref": 984
     },
     {
         "sura": 62,
         "range": "1-4",
         "topics": "God appointed Muhammad (pbuh) as a Messenger.",
-        "ref": 983
+        "ref": 985
     },
     {
         "sura": 62,
         "range": "5-8",
         "topics": "God rebutted the claim of Jews to be the favorites of God excluding others.",
-        "ref": 984
+        "ref": 986
     },
     {
         "sura": 62,
         "range": "9-11",
         "topics": "Commandment relating to the obligation of Friday prayers.",
-        "ref": 985
+        "ref": 987
     },
     {
         "sura": 63,
         "range": "1-8",
         "topics": "Hypocrites are such enemies of Islam and Muslims that even the Messenger's prayer cannot obtain forgiveness for them from God.",
-        "ref": 986
+        "ref": 988
     },
     {
         "sura": 63,
         "range": "9-11",
         "topics": "Let not your riches or children divert you from the remembrance of God, lest you become a real loser.",
-        "ref": 987
+        "ref": 989
     },
     {
         "sura": 64,
         "range": "1-10",
         "topics": "To God belongs the kingdom of heavens and earth, and He knows all that you conceal and reveal. Surely there will be life after death, Day of Judgment and reward for good and bad deeds.",
-        "ref": 988
+        "ref": 990
     },
     {
         "sura": 64,
         "range": "11-18",
         "topics": "No affliction can ever befall except by the leave of God and Among your wives and children there are some who are your enemies, be aware of them.",
-        "ref": 989
+        "ref": 991
     },
     {
         "sura": 65,
         "range": "1-7",
         "topics": "Laws of divorce and Iddat (waiting period) before the divorce takes effect. Iddat (waiting period) is three menstruation periods or three months and delivery, in a case of pregnancy.",
-        "ref": 990
+        "ref": 992
     },
     {
         "sura": 65,
         "range": "8-12",
         "topics": "Rebellion against God's commandment may bring stern reckoning or exemplary punishment, so fear God and adhere to His laws.",
-        "ref": 991
+        "ref": 993
     },
     {
         "sura": 66,
         "range": "1-7",
         "topics": "Do not make something unlawful which God has made lawful and wives of the Prophet are admonished on their behavior with him.",
-        "ref": 992
+        "ref": 994
     },
     {
         "sura": 66,
         "range": "8-12",
         "topics": "O believers! Turn to God in sincere repentance if you want to be forgiven. Example of the wives of Noah and Lot who will go to hell and example of Pharaoh's wife and Mary who will go to paradise.",
-        "ref": 993
+        "ref": 995
     },
     {
         "sura": 67,
         "range": "1-14",
         "topics": "Kingdom of the universe belongs to God. The lower heaven is decorated with the lamps (stars). Conversation between the dwellers of hell and her guards.",
-        "ref": 994
+        "ref": 996
     },
     {
         "sura": 67,
         "range": "15-30",
         "topics": "No one can help you against God. No one can provide you sustenance besides God. No one can save you from the punishment of God.",
-        "ref": 995
+        "ref": 997
     },
     {
         "sura": 68,
         "range": "1-16",
         "topics": "God has declared Muhammad (pbuh) to be of the highest moral character. Do not yield to any disbelieving oath-monger, slanderer or wicked person.",
-        "ref": 996
+        "ref": 998
     },
     {
         "sura": 68,
         "range": "17-33",
         "topics": "What happened to the arrogant stingy owners of a garden who did not want to pay charity?",
-        "ref": 997
+        "ref": 999
     },
     {
         "sura": 68,
         "range": "34-43",
         "topics": "God is not going to treat the Muslims as He will treat the guilty. Why don't the disbelievers understand this?",
-        "ref": 998
+        "ref": 1000
     },
     {
         "sura": 68,
         "range": "44-52",
         "topics": "Those who do not believe in God's revelations are led step by step towards destruction.",
-        "ref": 999
+        "ref": 1001
     },
     {
         "sura": 69,
         "range": "1-18",
         "topics": "Description of the Day of Resurrection and of the Day of Judgment",
-        "ref": 1000
+        "ref": 1002
     },
     {
         "sura": 69,
         "range": "19-37",
         "topics": "Righteous people and their reward and Sinful people and their punishment.",
-        "ref": 1001
+        "ref": 1003
     },
     {
         "sura": 69,
         "range": "38-52",
         "topics": "The Quran is the word of God and not of the Prophet, and is a reminder for those who fear God (God).",
-        "ref": 1002
+        "ref": 1004
     },
     {
         "sura": 70,
         "range": "1-35",
         "topics": "The Day of Judgment will be equal to fifty thousand years and the disbelievers will wish to save themselves from the punishment at the expense of their children, wives, brothers and relatives, but it will not happen.",
-        "ref": 1003
+        "ref": 1005
     },
     {
         "sura": 70,
         "range": "36-44",
         "topics": "Paradise is not for the disbelievers. The disbelievers will have downcast eyes and countenances distorted with shame.",
-        "ref": 1004
+        "ref": 1006
     },
     {
         "sura": 71,
         "range": "1-20",
         "topics": "The Prophet Noah's preaching and submission to God after exhausting all his efforts.",
-        "ref": 1005
+        "ref": 1007
     },
     {
         "sura": 71,
         "range": "21-28",
         "topics": "The Prophet Noah's prayer not to leave any disbeliever on the surface of the earth and God granted his wish.",
-        "ref": 1006
+        "ref": 1008
     },
     {
         "sura": 72,
         "range": "1-15",
         "topics": "A beautiful speech of the jinns who embraced Islam after hearing the Quran. Jinns also have different religions and sects, among jinns there are some Muslims and some deviators from the Truth.",
-        "ref": 1007
+        "ref": 1009
     },
     {
         "sura": 72,
         "range": "16-19",
         "topics": "Mosques are built for the worship of God, so invoke no one else besides Him.",
-        "ref": 1008
+        "ref": 1010
     },
     {
         "sura": 72,
         "range": "20-28",
         "topics": "The Messengers do not have the power to harm or benefit anyone, their mission is just to convey God's message. Only God knows the unseen, He reveals it to whom He chooses from the Messengers.",
-        "ref": 1009
+        "ref": 1011
     },
     {
         "sura": 73,
         "range": "1-19",
         "topics": "God ordered the Prophet not to stand in prayer the whole night. Those who oppose the Prophet will be treated with heavy fetters and blazing fire. The Quran is a reminder for those who seek to find the Right Way",
-        "ref": 1010
+        "ref": 1012
     },
     {
         "sura": 73,
         "range": 20,
         "topics": "Read from the Quran as much as you easily can. Whatever you spend in the way of God, you will find it in the Hereafter.",
-        "ref": 1011
+        "ref": 1013
     },
     {
         "sura": 74,
         "range": "1-7",
         "topics": "Instructions to the Prophet for cleanliness and patience.",
-        "ref": 1012
+        "ref": 1014
     },
     {
         "sura": 74,
         "range": "8-31",
         "topics": "The Day of Judgment will be very difficult, especially for those who deny God's revelations and oppose His cause.",
-        "ref": 1013
+        "ref": 1015
     },
     {
         "sura": 74,
         "range": "32-56",
         "topics": "Actions which lead to hellfire are: Not offering prayers, not feeding the poor, wasting time in vain talk and denying the Day of Judgment.",
-        "ref": 1014
+        "ref": 1016
     },
     {
         "sura": 75,
         "range": "1-15",
         "topics": "Be aware of the Day of Resurrection and Judgment, from which there is no escape.",
-        "ref": 1015
+        "ref": 1017
     },
     {
         "sura": 75,
         "range": "16-30",
         "topics": "God Himself took the responsibility of the Quran. The last moments of disbeliever's death.",
-        "ref": 1016
+        "ref": 1018
     },
     {
         "sura": 75,
         "range": "31-40",
         "topics": "The disbelievers don’t believe because they never took Islam seriously.",
-        "ref": 1017
+        "ref": 1019
     },
     {
         "sura": 76,
         "range": "1-12",
         "topics": "The universe was there before humankind existed, then God created man, provided him with guidance and gave him free will; either to believe or to disbelieve.",
-        "ref": 1018
+        "ref": 1020
     },
     {
         "sura": 76,
         "range": "13-22",
         "topics": "An exemplary life in paradise for those who choose to believe.",
-        "ref": 1019
+        "ref": 1021
     },
     {
         "sura": 76,
         "range": "23-31",
         "topics": "God sent this Quran gradually according to the issues faced by humankind. This is an admonition for those who want to adopt the way to their Lord (God).",
-        "ref": 1020
+        "ref": 1022
     },
     {
         "sura": 77,
         "range": "1-28",
         "topics": "God swears in the name of life-giving winds, rain and angels that the Day of Judgment will be established. Woe on that day to the disbelievers!",
-        "ref": 1021
+        "ref": 1023
     },
     {
         "sura": 77,
         "range": "29-40",
         "topics": "On that day; the disbelievers will be asked to walk towards the hell which they used to deny.",
-        "ref": 1022
+        "ref": 1024
     },
     {
         "sura": 77,
         "range": "41-45",
         "topics": "The righteous will be given all that they desire.",
-        "ref": 1023
+        "ref": 1025
     },
     {
         "sura": 77,
         "range": "46-50",
         "topics": "A warning to the disbelievers.",
-        "ref": 1024
+        "ref": 1026
     },
     {
         "sura": 78,
         "range": "1-30",
         "topics": "The creation of the heavens , earth, mountains and vegetation clearly points towards the Day of Judgment. Resurrection and man's accountability in the court of God.",
-        "ref": 1025
+        "ref": 1027
     },
     {
         "sura": 78,
         "range": "31-40",
         "topics": "The righteous will be well pleased and disbelievers will wish that they could remain merely dust.",
-        "ref": 1026
+        "ref": 1028
     },
     {
         "sura": 79,
         "range": "1-14",
         "topics": "Death, Day of Resurrection and Life after death.",
-        "ref": 1027
+        "ref": 1029
     },
     {
         "sura": 79,
         "range": "15-26",
         "topics": "The story of Moses when he called Pharaoh to his Lord, he denied God and was seized for punishment.",
-        "ref": 1028
+        "ref": 1030
     },
     {
         "sura": 79,
         "range": "27-33",
         "topics": "The creation of man is not harder than the creation of the heavens, earth and its contents.",
-        "ref": 1029
+        "ref": 1031
     },
     {
         "sura": 79,
         "range": "34-46",
         "topics": "Punishment and reward on the Day of Judgment.",
-        "ref": 1030
+        "ref": 1032
     },
     {
         "sura": 80,
         "range": "1-16",
         "topics": "The seekers of guidance should be given preference in conveying God's message.",
-        "ref": 1031
+        "ref": 1033
     },
     {
         "sura": 80,
         "range": "17-32",
         "topics": "Recognize your Creator and fulfill your obligations.",
-        "ref": 1032
+        "ref": 1034
     },
     {
         "sura": 80,
         "range": "33-42",
         "topics": "On the Day of Judgment, no one shall care about his own mother, father, brother or children.",
-        "ref": 1033
+        "ref": 1035
     },
     {
         "sura": 81,
         "range": "1-14",
         "topics": "A dreadful scene of Doomsday.",
-        "ref": 1034
+        "ref": 1036
     },
     {
         "sura": 81,
         "range": "15-29",
         "topics": "The Quran is conveyed to the Prophet through the angel Gabriel and this message is for all the people of the world.",
-        "ref": 1035
+        "ref": 1037
     },
     {
         "sura": 82,
         "range": "1-19",
         "topics": "Description of what will happen on the Day of Judgment. Guardian angels are recording all actions. God Himself will be the Judge.",
-        "ref": 1036
+        "ref": 1038
     },
     {
         "sura": 83,
         "range": "1-28",
         "topics": "Defrauders will be called to account and punished while the righteous will be rewarded with soft couches, choicest wines and special spring water.",
-        "ref": 1037
+        "ref": 1039
     },
     {
         "sura": 83,
         "range": "29-36",
         "topics": "Today the disbelievers laugh at the believers , a Day will come when they will be laughed at.",
-        "ref": 1038
+        "ref": 1040
     },
     {
         "sura": 84,
         "range": "1-19",
         "topics": "On Doomsday, heaven will split asunder and the earth will be spread out. Books of Deeds will be distributed; the righteous will be happy, while the disbelievers will be calling for death.",
-        "ref": 1039
+        "ref": 1041
     },
     {
         "sura": 84,
         "range": "20-25",
         "topics": "People are asked to believe while there is still time.",
-        "ref": 1040
+        "ref": 1042
     },
     {
         "sura": 85,
         "range": "1-22",
         "topics": "Those who torture the believers will be given the punishment of conflagration on the Day of Judgment. He Who created you for the first time will bring you back to life again for accountability.",
-        "ref": 1041
+        "ref": 1043
     },
     {
         "sura": 86,
         "range": "1-17",
         "topics": "Over each soul there is an appointed guardian angel. The Quran is a decisive word of God.",
-        "ref": 1042
+        "ref": 1044
     },
     {
         "sura": 87,
         "range": "1-19",
         "topics": "Glorify God; God has taken the responsibility of the Prophet's memory about The Quran. It is a reminder and those who heed its reminders will be successful in the Hereafter.",
-        "ref": 1043
+        "ref": 1045
     },
     {
         "sura": 88,
         "range": "1-16",
         "topics": "Condition of the disbelievers and the believers on",
-        "ref": 1044
+        "ref": 1046
     },
     {
         "sura": 88,
         "range": "17-26",
         "topics": "Wonders of nature, admonition and accountability.",
-        "ref": 1045
+        "ref": 1047
     },
     {
         "sura": 89,
         "range": "1-14",
         "topics": "Admonition for social welfare through the examples of prior nations.",
-        "ref": 1046
+        "ref": 1048
     },
     {
         "sura": 89,
         "range": "15-20",
         "topics": "What should be avoided to do real social welfare.",
-        "ref": 1047
+        "ref": 1049
     },
     {
         "sura": 89,
         "range": "21-30",
         "topics": "Day of Judgment will be too late to heed the admonition. God's address to the believers.",
-        "ref": 1048
+        "ref": 1050
     },
     {
         "sura": 90,
         "range": "1-20",
         "topics": "Admonition to the disbelievers of Makkah. God has given you one tongue and two lips to control it. Qualities of a righteous person.",
-        "ref": 1049
+        "ref": 1051
     },
     {
         "sura": 91,
         "range": "1-10",
         "topics": "Success depends on keeping the soul pure and failure depends on corrupting it.",
-        "ref": 1050
+        "ref": 1052
     },
     {
         "sura": 91,
         "range": "11-15",
         "topics": "The corrupted people of Thamūd were leveled to the ground.",
-        "ref": 1051
+        "ref": 1053
     },
     {
         "sura": 92,
         "range": "1-21",
         "topics": "For good people, God will facilitate the easy way and for the wicked, the hard way. What benefit will he get from wealth, if he himself is doomed.",
-        "ref": 1052
+        "ref": 1054
     },
     {
         "sura": 93,
         "range": "1-11",
         "topics": "Good news to Muhammad (pbuh) that the later period will be better for him than the earlier.",
-        "ref": 1053
+        "ref": 1055
     },
     {
         "sura": 94,
         "range": "1-8",
         "topics": "God expanded the chest of the Prophet, lightened his burden and exalted his fame.",
-        "ref": 1054
+        "ref": 1056
     },
     {
         "sura": 95,
         "range": "1-8",
         "topics": "Man is made the best creatures of all, except the disbelievers.",
-        "ref": 1055
+        "ref": 1057
     },
     {
         "sura": 96,
         "range": "1-19",
         "topics": "Read in the name of God, Who created man and taught him by the pen. Those who forbid from the worship of God will be dragged to hell by their forelock.",
-        "ref": 1056
+        "ref": 1058
     },
     {
         "sura": 97,
         "range": "1-5",
         "topics": "The night of Qadr is better than one thousand months.",
-        "ref": 1057
+        "ref": 1059
     },
     {
         "sura": 98,
         "range": "1-8",
         "topics": "The people of the Book did not get divided into sects until after receiving guidance. They were also commanded to establish prayers and pay Charity.",
-        "ref": 1058
+        "ref": 1060
     },
     {
         "sura": 99,
         "range": "1-8",
         "topics": "The earth will report whatever happened on her and men shall be shown their Books of Deeds",
-        "ref": 1059
+        "ref": 1061
     },
     {
         "sura": 100,
         "range": "1-11",
         "topics": "An example of horses who are more grateful to their owners than men to their Lord.",
-        "ref": 1060
+        "ref": 1062
     },
     {
         "sura": 101,
         "range": "1-11",
         "topics": "A scene explaining the Day of Judgment.",
-        "ref": 1061
+        "ref": 1063
     },
     {
         "sura": 102,
         "range": "1-8",
         "topics": "The cause of man's destruction is mutual rivalry for worldly gains. Real success is in working for the life Hereafter.",
-        "ref": 1062
+        "ref": 1064
     },
     {
         "sura": 103,
         "range": "1-3",
         "topics": "Formula for the way to salvation.",
-        "ref": 1063
+        "ref": 1065
     },
     {
         "sura": 104,
         "range": "1-9",
         "topics": "The slanderer, defamer and stingy shall be thrown into the blazing fire.",
-        "ref": 1064
+        "ref": 1066
     },
     {
         "sura": 105,
         "range": "1-5",
         "topics": "God has the power to defeat an army with elephants through the flock of birds.",
-        "ref": 1065
+        "ref": 1067
     },
     {
         "sura": 106,
         "range": "1-4",
         "topics": "Believe in God, Who is the provider of your sustenance.",
-        "ref": 1066
+        "ref": 1068
     },
     {
         "sura": 107,
         "range": "1-7",
         "topics": "Disbelief in the Hereafter is the main cause of moral decay and lack of caring about others.",
-        "ref": 1067
+        "ref": 1069
     },
     {
         "sura": 108,
         "range": "1-3",
         "topics": "God has made the name of the Prophet Muhammad (pbuh) everlasting.",
-        "ref": 1068
+        "ref": 1070
     },
     {
         "sura": 109,
         "range": "1-6",
         "topics": "The commandment not to compromise in the matters of religion.",
-        "ref": 1069
+        "ref": 1071
     },
     {
         "sura": 110,
         "range": "1-3",
         "topics": "Victory comes with the help of God.",
-        "ref": 1070
+        "ref": 1072
     },
     {
         "sura": 111,
         "range": "1-5",
         "topics": "Curse of God on Abu Lahab, his wife and the opponents of the Prophet.",
-        "ref": 1071
+        "ref": 1073
     },
     {
         "sura": 112,
         "range": "1-4",
         "topics": "Tawheed - the unique attribute of God.",
-        "ref": 1072
+        "ref": 1074
     },
     {
         "sura": 113,
         "range": "1-5",
         "topics": "Seek refuge with God from all evils.",
-        "ref": 1073
+        "ref": 1075
     },
     {
         "sura": 114,
         "range": "1-6",
         "topics": "Seek refuge with God from the slinking whisperers.",
-        "ref": 1074
+        "ref": 1076
     }
 ]

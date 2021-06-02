@@ -121,7 +121,7 @@
           <% } %>
 
               <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>" data-id="TOPICHEAD_<%= id %>"></span><% } %>
-              <article id="TOPICHEAD_<%= id %>" data-id="<%= id %>" class="topics list-group-item list-group-item-action" 
+              <article id="TOPICHEAD_<%= id %>" data-id="<%= id %>" class="topics <% if (toc[i].keys) { %>key-topics<% } %> list-group-item list-group-item-action" 
                   data-bs-toggle="collapse" data-bs-target="#ASIDE_<%= id %>" aria-controls="ASIDE_<%= id %>" role="button" aria-expanded="false">
                 <div id="TOPICREF_<%= toc[i].ref %>" class="d-flex w-100">
                   <i data-id="<%= id %>" class="far fa-bookmark me-2 mt-1"></i>

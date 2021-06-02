@@ -5,10 +5,8 @@ const Config = require('../lib/Config');
 
 const router = express.Router();
 
-var quran = Data.get('quran');
-var toc = Data.get('toc');
-for (var i = 0; i < toc.length; i++)
-  toc[i].ref = i + 1;
+var quran = loadQuran()
+var toc = loadTOC();
 const metadata = Data.get('metadata');
 const arQuran = Data.get('quran.clean');
 const enQuran = Data.get('quran.en');
@@ -91,8 +89,8 @@ router.post('/u', function (req, res, next) {
     return;
   }
   var result = Data.updateTOC(toc, quran, req.body);
-  toc = Data.get('toc');
-  quran = Data.get('quran');
+  toc = loadTOC();
+  quran = loadQuran();
   res.json(result);
 });
 
@@ -218,6 +216,18 @@ function searchQ(q, lang) {
     }
   }
   return results;
+}
+
+function loadTOC() {
+  var toc = Data.get('toc');
+  for (var i = 0; i < toc.length; i++)
+    toc[i].ref = i + 1;
+  return toc;
+}
+
+function loadQuran() {
+  var quran = Data.get('quran');
+  return quran;
 }
 
 module.exports = router;

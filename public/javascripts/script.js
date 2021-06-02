@@ -2,7 +2,8 @@ $(document).ready(function () {
 
     function highlightAnchor() {
         if (window.location.hash) {
-            $(window.location.hash).parent().click();
+            console.log(window.location.hash);
+            $('#'+$(window.location.hash).data('id')).click();
         }
         return true;
     }
@@ -65,11 +66,12 @@ $(document).ready(function () {
         location.href = '/t/' + $(this).html();
     });
 
-    $('.accordion-header').click(function () {
+    $('.list-group-item').click(function () {
         var topic = $(this);
-        var text = $(this).parent().find('.accordion-body .text');
-        var trans = $(this).parent().find('.accordion-body .trans');
-        var id = $(this).data('id');
+        var id = topic.data('id');
+        var topicsDetail = $(topic.attr('data-bs-target'));
+        var text = topicsDetail.find('.card-body .text');
+        var trans = topicsDetail.find('.card-body .trans');
         $.get({
             url: '/r/' + id
         }).done(function (data) {
@@ -93,13 +95,19 @@ $(document).ready(function () {
             gtag('event', 'view', {
                 "topics": id
             });
+            topic.addClass('active');
+            topic.find('.collapse-icon').removeClass('fa-chevron-down');
+            topic.find('.collapse-icon').addClass('fa-chevron-up');
         });
     });
 
-    $('.accordion-body').bind('DOMSubtreeModified', function(e) {
-        var id = $(e.currentTarget).parent().attr('aria-labelledby');
-        id = $('#' + id);
-        id.scroll();
+    $('.topics-detail').on('hidden.bs.collapse', function (event) {
+        var detailId = event.target.id;
+        var id = $('#' + detailId).data('id');
+        var topic = $('#TOPICHEAD_' + id);
+        topic.removeClass('active');
+        topic.find('.collapse-icon').removeClass('fa-chevron-up');
+        topic.find('.collapse-icon').addClass('fa-chevron-down');
     });
 
     highlightAnchor();

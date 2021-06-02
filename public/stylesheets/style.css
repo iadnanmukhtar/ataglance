@@ -16,19 +16,39 @@ h2 {
   overflow-y: auto;
 }
 
-.accordion-header {
+.fas, 
+.far {
+  color: gray;
+  width: 1rem;
+}
+
+.active .fas,
+.active .far {
+  color: white;
+}
+
+.topics h3 {
   font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.fa-bookmark {
+  color: darkred;
+}
+
+.active .fa-bookmark {
+  color: inherit;
 }
 
 .ref {
+  font-size: 0.60rem;
   color: #198754;
 }
 
-.accordion-item button {
-  font-size: 0.9rem;
+.active .ref {
+  color: inherit;
 }
 
-.topics a,
 .tags,
 .tags a {
   text-decoration: none;
@@ -48,11 +68,6 @@ h2 {
   text-decoration: underline;
 }
 
-.far, .fas {
-  color: darkred;
-  width: 15px;
-}
-
 .admin-ctrls {
   z-index: 0;
 }
@@ -60,6 +75,7 @@ h2 {
 [contenteditable=true] {
   border: 1px solid blue;
   background-color: yellow;
+  color: black;
 }
 
 .trans,

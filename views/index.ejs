@@ -112,59 +112,52 @@
           if (toc[i].sura != sura) { 
             sura = toc[i].sura;
             if (sura > 1) { %>
-              </div>
+              </section>
             <% } %>
           
           <h2 id="S<%= sura %>" class="mt-2">Sura <span lang="ar"><%= md.sura[sura-1].name %></span> <%= sura %> <%= md.sura[sura-1].tname %> (<%= md.sura[sura-1].ename %>)</h2>
-          <div class="accordion" id="SURATOPICS_<%= sura %>">
+          <section id="SURATOPICS_<%= sura %>" class="list-group">
 
           <% } %>
 
-            <div class="accordion-item">
-              <h3 id="TOPICHEAD_<%= id %>" class="accordion-header" data-id="<%= id %>">
-                <button class="accordion-button collapsed row" type="button" data-bs-toggle="collapse" data-bs-target="#TOPICTEXT_<%= id %>" aria-expanded="false" aria-controls="TOPICTEXT_<%= id %>">
-                  <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>"></span><% } %>
-                  <div class="col">
-                    <div id="TOPICREF_<%= toc[i].ref %>" class="topics">
-                      <i data-id="<%= id %>" class="me-2 far fa-bookmark"></i>
-                      <a href="#TOPICHEAD_<%= id %>"><%= toc[i].topics %></a>
-                    </div>
-                    <%
-                      if (tags && toc[i].tags) {
-                    %>
-                    <div class="tags">
-                      <i class="me-2 fas fa-hashtag"></i>
-                      <%
-                          var tags = toc[i].tags.split(/\s+/g);
-                          for (var t = 0; t < tags.length; t++) {
-                      %>
-                        <a class="tag"><%= tags[t] %></a>
-                      <%
-                          }
-                      %>
-                        </div>
-                      <%
-                        }
-                      %>
-                    <div class="ref d-block d-sm-none mt-1">
-                      <a href="#top"><i class="me-2 far fa-hand-point-up"></i></a><small><%= sura %>:<%= toc[i].range %></small>
-                    </div>
-                    <% if (admin) { %>
-                    <div class="admin-ctrls" style="display:none">
-                      Keys: <span id="TOPICKEYS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].keys %></span><br>
-                      Tags: <span id="TOPICTAGS_<%= toc[i].ref %>" contenteditable="true" style="width: 100%; display:inline-block;"><%= toc[i].tags %></span><br>
-                      Range: <span id="TOPICRANGE_<%= toc[i].ref %>" contenteditable="true"><%= toc[i].range %></span>
-                      <small><a class="admin-ctrl-update" data-ref="<%= toc[i].ref %>" href="#">Update</a></small>
-                    </div>
-                    <% } %>
+              <% for (var a = 0; a < anchors.length; a++) { %><span id="A<%= anchors[a] %>" data-id="TOPICHEAD_<%= id %>"></span><% } %>
+              <article id="TOPICHEAD_<%= id %>" data-id="<%= id %>" class="topics list-group-item list-group-item-action" 
+                  data-bs-toggle="collapse" data-bs-target="#ASIDE_<%= id %>" aria-controls="ASIDE_<%= id %>" role="button" aria-expanded="false">
+                <div id="TOPICREF_<%= toc[i].ref %>" class="d-flex w-100">
+                  <i data-id="<%= id %>" class="far fa-bookmark me-2 mt-1"></i>
+                  <h3 href="#TOPICHEAD_<%= id %>" class="topics-text flex-grow-1 mb-1">
+                    <%= toc[i].topics %>
+                  </h3>
+                  <small class="ref text-nowrap ms-1">
+                    <%= sura %>:<%= range[0] %>
+                  </small>
+                  <a class="ms-2" href="#top"><i class="far fa-hand-point-up"></i></a>
+                  <i class="collapse-icon fas fa-chevron-down ms-2"></i>
+                </div>
+                <% if (admin) { %>
+                <div class="admin-ctrls ms-4" style="display:none;">
+                  <div class="form-group"><input type="text" class="form-control form-control-sm" id="TOPICRANGE_<%= toc[i].ref %>" placeholder="Aya range" value="<%= toc[i].range %>"></div>
+                  <div class="form-group"><input type="text" class="form-control form-control-sm" id="TOPICKEYS_<%= toc[i].ref %>" placeholder="Key ayas" value="<%= toc[i].keys %>"></div>
+                  <div class="form-group"><input type="text" class="form-control form-control-sm" id="TOPICTAGS_<%= toc[i].ref %>" placeholder="Hashtags" value="<%= toc[i].tags %>"></div>
+                  <button type="submit" class="admin-ctrls-update btn btn-sm btn-warning" data-ref="<%= toc[i].ref %>">Update</button>
+                </div>
+                <% } %>
+                <% if (tags && toc[i].tags) { %>
+                  <div class="tags">
+                    <i class="me-2 fas fa-hashtag"></i>
+                  <%
+                      var tags = toc[i].tags.split(/\s+/g);
+                      for (var t = 0; t < tags.length; t++) {
+                  %>
+                    <a class="tag"><%= tags[t] %></a>
+                  <%
+                      }
+                  %>
                   </div>
-                  <div class="ref col-2 text-end text-nowrap me-2 me-md-0 d-none d-sm-block">
-                    <span class="badge rounded-pill bg-success"><%= sura %>:<%= range[0] %></span><a href="#top"><i class="ms-2 far fa-hand-point-up"></i></a>
-                  </div>
-                </button>
-              </h3>
-              <section id="TOPICTEXT_<%= id %>" class="accordion-collapse collapse" aria-labelledby="TOPICHEAD_<%= id %>" data-bs-parent="#SURATOPICS_<%= sura %>">
-                <div class="accordion-body">
+                <% } %>
+              </article>
+              <aside id="ASIDE_<%= id %>" data-id="<%= id %>" class="topics-detail collapse">
+                <div class="card card-body">
                   <div class="row">
                     <div class="col-md-6 col-12 trans"></div>
                     <div lang="ar" class="col-md-6 col-12 text"></div>
@@ -175,11 +168,10 @@
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
+              </aside>
 
       <% } %>
-        </div>
+        </section>
       </div>
 
     </main>
@@ -192,17 +184,16 @@
 
     <% if (admin) { %>
       <script>
-        $('.accordion-item .topics').dblclick(function () {
+        $('.topics-text').dblclick(function () {
             $(this).attr('contenteditable', 'true');
-            $(this).parent().find('.admin-ctrls').show();
+            $(this).parent().parent().find('.admin-ctrls').show();
         });
-        $('.admin-ctrl-update').click(function () {
-            console.log('triggered');
+        $('.admin-ctrls-update').click(function () {
             var ref = $(this).data('ref');
-            var topics = $('#TOPICREF_' + ref).text();
-            var range = $('#TOPICRANGE_' + ref).text();
-            var keys = $('#TOPICKEYS_' + ref).text();
-            var tags = $('#TOPICTAGS_' + ref).text();
+            var topics = $('#TOPICREF_' + ref).find('.topics-text').text().trim();
+            var range = $('#TOPICRANGE_' + ref).val().trim();
+            var keys = $('#TOPICKEYS_' + ref).val().trim();
+            var tags = $('#TOPICTAGS_' + ref).val().trim();
             $.post('/u', {
                 ref: ref,
                 range: range,
